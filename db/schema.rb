@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_154307) do
+ActiveRecord::Schema.define(version: 2021_11_22_172627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artwork_prices", force: :cascade do |t|
+    t.integer "price_estimation"
+    t.bigint "user_id", null: false
+    t.bigint "artwork_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artwork_id"], name: "index_artwork_prices_on_artwork_id"
+    t.index ["user_id"], name: "index_artwork_prices_on_user_id"
+  end
+
+  create_table "artworks", force: :cascade do |t|
+    t.string "name"
+    t.integer "score"
+    t.string "marketplace_url"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_artworks_on_user_id"
+  end
+
+  create_table "upvotes", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "artwork_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["artwork_id"], name: "index_upvotes_on_artwork_id"
+    t.index ["user_id"], name: "index_upvotes_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +52,14 @@ ActiveRecord::Schema.define(version: 2021_11_22_154307) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "artwork_prices", "artworks"
+  add_foreign_key "artwork_prices", "users"
+  add_foreign_key "artworks", "users"
+  add_foreign_key "upvotes", "artworks"
+  add_foreign_key "upvotes", "users"
 end
