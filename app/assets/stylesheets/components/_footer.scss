@@ -1,0 +1,81 @@
+.footer {
+  background:black;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  color: whitesmoke;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.colored-icons {
+  color: white
+}
+.footer-links a {
+  color: black;
+  opacity: 0.55;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.btn-footer {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  color: whitesmoke ;
+  background-color: black;
+}
+.btn-footer a {
+  color: whitesmoke;
+  opacity: 0.55;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.btn-footer a:hover {
+  opacity: 1;
+}
+
+.footer-brand img {
+
+  width: 250px;
+
+}
+
+#scroll_to_top {
+  width: 70px;
+  height: 70px;
+  opacity: 0.55;
+
+   img {
+    width: 100%;
+    height: 100%;
+  }
+}
+#scroll_to_top a {
+  color: rgb(255, 255, 255);
+  opacity: 0.55;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+#scroll_to_top a:hover {
+  opacity: 1;
+}

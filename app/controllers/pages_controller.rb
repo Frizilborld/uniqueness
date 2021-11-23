@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def test_upload
+  def test_upload #suprimmer la methode une fois le contenu traité
     # TODO: a bouger dans la methode create du artworks controller
     # pseudo code :
     # - artwork.new avec les params
@@ -19,7 +19,8 @@ class PagesController < ApplicationController
     #   colors
     # - save l'artwork
 
-    file = params[:upload_image][:file]
-    uploaded_file = UploadFileToApi.call(file)
+    # +coller les deux dernières lignes
+    #file = params[:upload_image][:file]
+    #uploaded_file = UploadFileToApi.call(file)
   end
 end

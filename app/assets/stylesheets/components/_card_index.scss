@@ -1,0 +1,61 @@
+.card-product-index {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  background-color: white;
+  background-size: cover;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  font-family: 'Rajdhani', sans-serif;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  border-radius: 2px;
+}
+
+.card-product-index img {
+  justify-content: center;
+  text-align: center;
+  height: 260px;
+  width: 340px;
+}
+
+.card-product-index h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  color: black;
+}
+
+.card-product-index p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .9;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: left;
+  color: #404E5C;
+}
+
+.card-product-index .card-product-infos-index {
+  padding: 80px 20px 10px 10px;
+  margin-bottom: auto;
+  border-radius: 8px;
+  justify-content: left;
+}
+
+.cards-container-index {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-around;
+  border: rgb(0, 0, 0);
+  background-color:#E5E9EC;
+}
+
+.card-product-index:hover {
+  transform: scale(1.01);
+}

@@ -1,12 +1,18 @@
-.navbar-lewagon {
+.navbar-uniqueness {
   justify-content: space-between;
-  background: white;
+  background:black;
+  border-bottom: 1px solid #404E5C;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-uniqueness .navbar-collapse {
   flex-grow: 0;
+  color: red;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-uniqueness .navbar-brand img {
+  width: 250px;
+  margin-left: 10px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color:whitesmoke;
 }

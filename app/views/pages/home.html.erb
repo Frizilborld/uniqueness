@@ -1,6 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= simple_form_for :upload_image, url: test_upload_path do |f| %>
+<%= simple_form_for #mettre une instance de? dans":upload_image"#, url: test_upload_path do #(la partie à gauche de # est à supprimer) |f| %>
   <%= f.input :file, as: :file %>
-  <%= f.submit 'envoyeeeeer' %>
+  <%= f.submit 'envoyer' %>
 <% end %>
