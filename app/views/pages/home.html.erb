@@ -1,2 +1,6 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<%= simple_form_for :upload_image, url: test_upload_path do |f| %>
+  <%= f.input :file, as: :file %>
+  <%= f.submit 'envoyeeeeer' %>
+<% end %>
