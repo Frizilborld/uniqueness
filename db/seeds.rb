@@ -27,107 +27,190 @@ léa_hart = User.create!(name: "Léa Hart", phone_number: '25548445', email: 'L�
 
 
 file = URI.open('https://blog.artsper.com/wp-content/uploads/2020/07/Caspar_David_Friedrich_-_Der_Mo%CC%88nch_am_Meer_-_Google_Art_Project-5-644x362.jpg')
-image1 = Artwork.new(name: "Sky gray", upvotes: "3", description: "Gray light crossroads", user_id: artion.id)
+image1 = Artwork.new(name: "Sky gray", description: "Gray light crossroads", user_id: artion.id)
 image1.photo.attach(io: file, filename: 'Sky gray.jpg', content_type: 'image/png')
+image1.upvotes.create!(user_id: User.all.sample.id)
+image1.upvotes.create!(user_id: User.all.sample.id)
+image1.upvotes.create!(user_id: User.all.sample.id)
+image1.upvotes.create!(user_id: User.all.sample.id)
 image1.save!
 
 file = URI.open('https://images.saatchiart.com/saatchi/1073491/art/4472145/3541985-HSC00001-7.jpg')
-image2 = Artwork.new(name: "Colourful landscape", upvotes: "5", description: 'Sunday road trip', user_id: harun_ayhan.id)
+image2 = Artwork.new(name: "Colourful landscape", description: 'Sunday road trip', user_id: harun_ayhan.id)
 image2.photo.attach(io: file, filename: 'Colourful landscape.jpg', content_type: 'image/png')
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
+image2.upvotes.create!(user_id: User.all.sample.id)
 image2.save!
 
 file = URI.open('https://d5wt70d4gnm1t.cloudfront.net/media/a-s/articles/2055-716352946698/landscape-painting-list-900x450-c.jpg')
-image3 = Artwork.new(name: "Sky burn", upvotes: "9", description: 'War of angels', user_id: artion.id)
+image3 = Artwork.new(name: "Sky burn", description: 'War of angels', user_id: artion.id)
 image3.photo.attach(io: file, filename: 'Sky burn.jpg', content_type: 'image/png')
 image3.save!
 
 file = URI.open('https://d16kd6gzalkogb.cloudfront.net/magazine_images/Guido-Borelli-Image-via-Lookingglass-photo-com.jpg')
-image4 = Artwork.new(name: "River house", upvotes: "11", description: 'An afternoon in the countryside', user_id: harun_ayhan.id)
+image4 = Artwork.new(name: "River house", description: 'An afternoon in the countryside', user_id: harun_ayhan.id)
 image4.photo.attach(io: file, filename: 'River house.jpg', content_type: 'image/png')
+image4.upvotes.create!(user_id: User.all.sample.id)
+image4.upvotes.create!(user_id: User.all.sample.id)
+image4.upvotes.create!(user_id: User.all.sample.id)
+image4.upvotes.create!(user_id: User.all.sample.id)
 image4.save!
 
 file = URI.open('https://www.outdoorpainter.com/wp-content/uploads/2019/06/rural-farm-landscape-paintings-JacalynBeam_STANDTALL.jpg')
-image5 = Artwork.new(name: "Rural life", upvotes: "8", description: 'Simplicity of the ordinary', user_id: harun_ayhan.id)
+image5 = Artwork.new(name: "Rural life", description: 'Simplicity of the ordinary', user_id: harun_ayhan.id)
 image5.photo.attach(io: file, filename: 'Rural life.jpg', content_type: 'image/png')
 image5.save!
 
 file = URI.open('https://trendyartideas.com/wp-content/uploads/2021/01/The-Landscape-Painting-of-Rosanne-Croucher.jpg')
-image6 = Artwork.new(name: "Splendour", upvotes: "4", description: 'Splendour natural world', user_id: lionel_lilak.id)
+image6 = Artwork.new(name: "Splendour", description: 'Splendour natural world', user_id: lionel_lilak.id)
 image6.photo.attach(io: file, filename: 'Splendour.jpg', content_type: 'image/png')
+image6.upvotes.create!(user_id: User.all.sample.id)
 image6.save!
 
 file = URI.open('https://s30965.pcdn.co/blogs/the-study/wp-content/uploads/02-1-950x625.jpg')
-image7 = Artwork.new(name: "Mona Lisa's twin", upvotes: "15", description: 'Mona Lisa mind waltz', user_id: kraken_nisop.id)
+image7 = Artwork.new(name: "Mona Lisa's twin", description: 'Mona Lisa mind waltz', user_id: kraken_nisop.id)
 image7.photo.attach(io: file, filename: "Mona Lisa's twin.jpg", content_type: 'image/png')
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
+image7.upvotes.create!(user_id: User.all.sample.id)
 image7.save!
 
 file = URI.open('https://cryptofrix.com/blog/wp-content/uploads/2020/12/nft-art.jpg')
-image8 = Artwork.new(name: "One day on mars", upvotes: "9", description: 'In the shadow of science', user_id: dany_lian.id)
+image8 = Artwork.new(name: "One day on mars", description: 'In the shadow of science', user_id: dany_lian.id)
 image8.photo.attach(io: file, filename: 'One day on mars.jpg', content_type: 'image/png')
+image8.upvotes.create!(user_id: User.all.sample.id)
+image8.upvotes.create!(user_id: User.all.sample.id)
 image8.save!
 
 file = URI.open('https://nftcalendar.io/storage/uploads/events/2021/10/f9r6j57BRr9zT3ClADD1w5znYN3E1xeLnDLmdzch.jpg')
-image9 = Artwork.new(name: "Face", upvotes: "3", description: 'Print in the skin', user_id: samuel_nash.id)
+image9 = Artwork.new(name: "Face", description: 'Print in the skin', user_id: samuel_nash.id)
 image9.photo.attach(io: file, filename: 'Face.jpg', content_type: 'image/png')
+image9.upvotes.create!(user_id: User.all.sample.id)
+image9.upvotes.create!(user_id: User.all.sample.id)
+image9.upvotes.create!(user_id: User.all.sample.id)
 image9.save!
 
 file = URI.open('https://www.nftsstreet.com/wp-content/uploads/2021/10/Zebrascape_web2-1.jpg')
-image10 = Artwork.new(name: "Zebra", upvotes: "15", description: 'Zebra orgy', user_id: mili_botis.id)
+image10 = Artwork.new(name: "Zebra", description: 'Zebra orgy', user_id: mili_botis.id)
 image10.photo.attach(io: file, filename: 'Zebra.jpg', content_type: 'image/png')
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
+image10.upvotes.create!(user_id: User.all.sample.id)
 image10.save!
 
 file = URI.open('https://images.squarespace-cdn.com/content/v1/51d98be2e4b05a25fc200cbc/1625163739480-MPEOKH3JI4UOGQXWA45N/NFT12.png')
-image11 = Artwork.new(name: "Interior", upvotes: "12", description: 'Inside the unknown', user_id: jean_potin.id)
+image11 = Artwork.new(name: "Interior", description: 'Inside the unknown', user_id: jean_potin.id)
 image11.photo.attach(io: file, filename: 'Interior.jpg', content_type: 'image/png')
+image11.upvotes.create!(user_id: User.all.sample.id)
+image11.upvotes.create!(user_id: User.all.sample.id)
 image11.save!
 
 file = URI.open('hhttps://www.coinmarketrade.com/wp-content/uploads/2021/06/Webp.net-resizeimage-5-gID_4.png')
-image12 = Artwork.new(name: "Toad", upvotes: "2", description: "The toad's despair", user_id: jean_potin.id)
+image12 = Artwork.new(name: "Toad", description: "The toad's despair", user_id: jean_potin.id)
 image12.photo.attach(io: file, filename: 'Toad.jpg', content_type: 'image/png')
+image12.upvotes.create!(user_id: User.all.sample.id)
+image12.upvotes.create!(user_id: User.all.sample.id)
+image12.upvotes.create!(user_id: User.all.sample.id)
+image12.upvotes.create!(user_id: User.all.sample.id)
+image12.upvotes.create!(user_id: User.all.sample.id)
+image12.upvotes.create!(user_id: User.all.sample.id)
 image12.save!
 
 file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FJRK3icwSzVeKXpX_munMs7Jhj4j-S9sP_Zjx1IatToaMvCSzMlX1awnqtfMsAvdb8o&usqp=CAU')
-image13 = Artwork.new(name: "Spell", upvotes: "7", description: 'The origin of the world', user_id: mili_botis.id)
+image13 = Artwork.new(name: "Spell", description: 'The origin of the world', user_id: mili_botis.id)
 image13.photo.attach(io: file, filename: 'Spell.jpg', content_type: 'image/png')
+image13.upvotes.create!(user_id: User.all.sample.id)
+image13.upvotes.create!(user_id: User.all.sample.id)
+image13.upvotes.create!(user_id: User.all.sample.id)
 image13.save!
 
 file = URI.open('https://tra.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fbin.2F2021.2F10.2F04.2Fb7c0502d-5fd0-4d66-8614-c5acd9516488.2Ejpeg/812x609/background-color/ffffff/quality/70/les-nft-font-decoller-le-marche-de-lart-contemporain.jpg')
-image14 = Artwork.new(name: "Spatial Donuts", upvotes: "6", description: 'Spatial donuts for an Ewok', user_id: mili_botis.id)
+image14 = Artwork.new(name: "Spatial Donuts", description: 'Spatial donuts for an Ewok', user_id: mili_botis.id)
 image14.photo.attach(io: file, filename: 'Spatial Donuts.jpg', content_type: 'image/png')
+image14.upvotes.create!(user_id: User.all.sample.id)
 image14.save!
 
 file = URI.open('https://nftartgallery1.com/wp-content/uploads/2021/05/0111.jpg')
-image15 = Artwork.new(name: "Ruins", upvotes: "22", description: 'After the old next', user_id: viktor_krazolopotisch.id)
+image15 = Artwork.new(name: "Ruins", description: 'After the old next', user_id: viktor_krazolopotisch.id)
 image15.photo.attach(io: file, filename: 'Ruins.jpg', content_type: 'image/png')
+image15.upvotes.create!(user_id: User.all.sample.id)
+image15.upvotes.create!(user_id: User.all.sample.id)
 image15.save!
 
 file = URI.open('https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/291949/406878_86844.jpeg')
-image16 = Artwork.new(name: "Doomsday", upvotes: "18", description: 'When god sleep the others make war', user_id: viktor_krazolopotisch.id)
+image16 = Artwork.new(name: "Doomsday", description: 'When god sleep the others make war', user_id: viktor_krazolopotisch.id)
 image16.photo.attach(io: file, filename: 'Doomsday.jpg', content_type: 'image/png')
+image16.upvotes.create!(user_id: User.all.sample.id)
+image16.upvotes.create!(user_id: User.all.sample.id)
+image16.upvotes.create!(user_id: User.all.sample.id)
+image16.upvotes.create!(user_id: User.all.sample.id)
+image16.upvotes.create!(user_id: User.all.sample.id)
+image16.upvotes.create!(user_id: User.all.sample.id)
 image16.save!
 
 file = URI.open('https://www.arweave.net/lL976IKZ8I-I9D77VgDhDJjgNbLoQtnkk4lajLbc-84?ext=JPG')
-image17 = Artwork.new(name: "Fish", upvotes: "8", description: 'Underwater feud', user_id: felix_norman.id)
+image17 = Artwork.new(name: "Fish", description: 'Underwater feud', user_id: felix_norman.id)
 image17.photo.attach(io: file, filename: 'Fish.jpg', content_type: 'image/png')
+image17.upvotes.create!(user_id: User.all.sample.id)
+image17.upvotes.create!(user_id: User.all.sample.id)
 image17.save!
 
 file = URI.open('https://www.arweave.net/KidAqNiW83zlZ0keiVSrYhpy8JzLNHf3StrNRauV1AM?ext=JPG')
-image18 = Artwork.new(name: "Brothers", upvotes: "23", description: "Brothers in depth", user_id: felix_norman.id)
+image18 = Artwork.new(name: "Brothers", description: "Brothers in depth", user_id: felix_norman.id)
 image18.photo.attach(io: file, filename: 'Brothers.jpg', content_type: 'image/png')
+image18.upvotes.create!(user_id: User.all.sample.id)
+image18.upvotes.create!(user_id: User.all.sample.id)
+image18.upvotes.create!(user_id: User.all.sample.id)
+image18.upvotes.create!(user_id: User.all.sample.id)
 image18.save!
 
 file = URI.open('https://i.redd.it/o0frfaowbtq61.jpg')
-image19 = Artwork.new(name: "Pink Fusion", upvotes: "7", description: 'A bouquet for a flower', user_id: max)
+image19 = Artwork.new(name: "Pink Fusion", description: 'A bouquet for a flower', user_id:léa_hart.id)
 image19.photo.attach(io: file, filename: 'Pink Fusion.jpg', content_type: 'image/png')
+image19.upvotes.create!(user_id: User.all.sample.id)
+image19.upvotes.create!(user_id: User.all.sample.id)
 image19.save!
 
 file = URI.open('https://www.nftculture.com/wp-content/uploads/2021/11/taniarivilisnftartist-1160x665.png')
-image20 = Artwork.new(name: "Man of Eden", upvotes: "14", description: 'A ride in paradise', user_id: léa_hart.id)
+image20 = Artwork.new(name: "Man of Eden", description: 'A ride in paradise', user_id: léa_hart.id)
 image20.photo.attach(io: file, filename: 'Man of Eden.jpg', content_type: 'image/png')
+image20.upvotes.create!(user_id: User.all.sample.id)
+image20.upvotes.create!(user_id: User.all.sample.id)
+image20.upvotes.create!(user_id: User.all.sample.id)
 image20.save!
 
 # file = URI.open('https://lh3.googleusercontent.com/-gLAlYetq2w7chjVKzeGRBXnNhEVPyorA7uVZjNoY0yRCFgulTZcnS1kShn6Mp8iPBP0tCmX_OdsyKbJIZsumDUxceJcHoH0J2gvcg=w1400-k')
-# image21 = Artwork.new(name: "Bored Ape Kennel Club #1", upvotes: "" '25', description: '1262x1262', user_id: nico)
+# image21 = Artwork.new(name: "Bored Ape Kennel Club #1",25', description: '1262x1262', user_id: nico)
 # image21.photo.attach(io: file, filename: 'BAKC#1.jpg', content_type: 'image/png')
 # image21.save!
 
