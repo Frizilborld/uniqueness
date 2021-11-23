@@ -1,0 +1,57 @@
+.card-product-show {
+  display: block;
+  flex-wrap: wrap;
+  background-color: white;
+  background-size: cover;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  font-family: 'Rajdhani', sans-serif;
+  border: 1px solid black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  border-radius: 2px;
+}
+
+.card-product-show img {
+  height: 420px;
+  width: 580px;
+}
+
+.card-product-show h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  color: black;
+}
+
+.card-product-show p {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .9;
+  margin-bottom: 0;
+  margin-top: 8px;
+  text-align: left;
+  color: #404E5C;
+}
+
+.card-product-show .card-product-infos-show {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: auto;
+  border-radius: 8px;
+  justify-content: left;
+}
+
+.cards-container-show {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-around;
+  border-radius: 30px;
+  border: rgb(0, 0, 0);
+  margin-top: 30px;
+  float: right;
+  margin-right: 20px;
+}
