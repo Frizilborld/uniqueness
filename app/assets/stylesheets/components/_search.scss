@@ -3,6 +3,7 @@
   border-radius: 55px;
   margin-right: 195px;
   margin-left: 30px;
+
 }
 
 .search {
@@ -13,7 +14,8 @@
   border-radius: 30px;
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  border: 1px solid #E7E7E7;
+  border: none;
+  background-color: darkgray;
 }
 
 .search-form-control .form-control:focus {
@@ -28,8 +30,7 @@
 }
 
 .btn-navbar {
-  color: #7c7c7c;
-  border: 1px solid #4A4A4A;
+  border: none;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -40,7 +41,7 @@
   bottom: 8px;
   right: 3px;
   border-radius: 55px;
-  color:white;
+  color:black;
   display: flex
 }
 
