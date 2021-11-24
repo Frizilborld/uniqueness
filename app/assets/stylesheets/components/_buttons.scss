@@ -1,0 +1,26 @@
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid;
+}
+
+.btn-uniq-primary {
+  border-color: $uniq-primary;
+  background: $uniq-primary;
+  color: white;
+  &:hover {
+    border-color: #001b56;
+    background: #001b56;
+    color: white;
+  }
+}
+
+.btn-uniq-secondary {
+  border-color: $uniq-primary;
+  color: $uniq-primary;
+  &:hover {
+    border-color: #001b56;
+    background: #001b56;
+    color: white;
+  }
+}
