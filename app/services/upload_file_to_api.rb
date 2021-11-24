@@ -21,12 +21,12 @@ class UploadFileToApi
       }
     }
 
-    body = "{\"file_id\": \"47504935620d459796af1915ba158dd5\"}"
+    body = JSON.parse("{\"file_id\": \"47504935620d459796af1915ba158dd5\"}")
 
     # TODO: UNCOMMENT WHEN WE ARE READY TO USE THE API
     response = HTTP.headers(headers).post(url, params)
-    body     = response.body.readpartial
+    body     = response.parse
 
-    return JSON.parse(body)
+    return body
   end
 end
