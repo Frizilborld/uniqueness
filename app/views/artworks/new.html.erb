@@ -1,7 +1,10 @@
 <h1>Artworks#new</h1>
 <p>Find me in app/views/artworks/new.html.erb</p>
 <p>Import a picture</p>
-<%= simple_form_for :@artwork |f| %>
-  <%= f.input :file, as: :file %>
+
+<%= simple_form_for @artwork do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit 'envoyer' %>
 <% end %>

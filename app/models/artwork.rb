@@ -5,5 +5,6 @@ class Artwork < ApplicationRecord
   has_one_attached :photo
 
   validates :name, presence: true
+  validates :description, presence: true
   # validates :marketplace_url, presence: true
 end
