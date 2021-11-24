@@ -2,6 +2,7 @@ class ArtworksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    @artworks = Artwork.all
   end
 
   def show
@@ -20,6 +21,7 @@ class ArtworksController < ApplicationController
     @artwork.color_tags_api_file_id = uploaded_file["file_id"]
 
     report = GetColorTags.call(@artwork.color_tags_api_file_id)
+
 
     @artwork.number_of_pixel_in_image = report["result"]["number_of_pixel_in_image"]
     @artwork.width  = report["result"]["width"]
