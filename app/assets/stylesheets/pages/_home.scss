@@ -1,1 +1,53 @@
-// Specific CSS for your home-page
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  background-color: black;
+  color: whitesmoke;
+  font-family: $headers-font;
+}
+
+.half-home-1 {
+  width: 100vh;
+  height: 90vh;
+  background-color: black;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.half-home-2 {
+  width: 100vh;
+  height: 90vh;
+  background-color: black;
+  padding: 25px;
+}
+
+.half-home-3 {
+  width: 100vh;
+  height: 90vh;
+  background-color: black;
+}
+
+.half-home-4 {
+  width: 100vh;
+  height: 90vh;
+  background-color: black;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+}
+.home-img img {
+  width: 100vh;
+  height: 90vh;
+  object-fit: contain;
+}
+
+.home-img-2 img {
+  width: 50vh;
+  height: 45vh;
+  object-fit: contain;
+}
