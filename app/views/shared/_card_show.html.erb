@@ -1,0 +1,9 @@
+<div class="card-product-show">
+  <% if artwork.photo.attached? %>
+  <%= cl_image_tag artwork.photo.key %>
+  <% end %>
+  <div class="card-product-infos-show">
+    <h2><%= artwork.name %></h2>
+    <p><%= artwork.description %></p>
+  </div>
+</div>
