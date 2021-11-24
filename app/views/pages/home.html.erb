@@ -1,3 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Uniqueness</h1>
+    <p>Un beau slogan</p>
+    <a class="btn btn-uniq-primary" href="#">Let's go</a>
+  </div>
+</div>
+  <a class="btn btn-uniq-primary" href="#">Button primary</a>
+  <a class="btn btn-uniq-secondary" href="#">Button secondary</a>
+
+
+  <div class="cards-container-index">
+  <div class="card-product-index">
+   <% @artworks.each do |artwork| %>
+  <% if artwork.photo.attached? %>
+    <%= cl_image_tag artwork.photo.key %>
+  <% end %>
+  <p class=""><%= artwork.name %></p>
+  <% end %>
+   </div>
+</div>
