@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_114653) do
+ActiveRecord::Schema.define(version: 2021_11_24_140452) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_114653) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "description"
-    t.integer "color_tags_api_file_id"
+    t.bigint "color_tags_api_file_id"
     t.integer "height"
     t.integer "width"
     t.integer "number_of_pixel_in_image"

@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
   def index
-    @artwork = Artwork.all
+    @artworks = Artwork.all
   end
 
   def show
@@ -22,8 +22,9 @@ class ArtworksController < ApplicationController
     @artwork.width = report["process"]
     @artwork.height = report["process"]
     @artwork.colors = report["process"]
-    @artwork.save
-    redirect_to root_path(@artwork)
+    @artwork.user = current_user
+    @artwork.save!
+    redirect_to artwork_path(@artwork)
   end
 
   private
