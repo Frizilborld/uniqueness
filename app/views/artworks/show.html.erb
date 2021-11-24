@@ -1,12 +1,12 @@
 
 <div class="cards-container-show">
   <div class="card-product-show">
-    <% if artwork.photo.attached? %>
-    <%= cl_image_tag artwork.photo.key %>
-    <% end %>
+
+    <%= cl_image_tag @artwork.photo.key %>
+
       <div class="card-product-infos-show">
-        <h2><%= artwork.name %></h2>
-        <p><%= artwork.description %></p>
+        <h2><%= @artwork.name %></h2>
+        <p><%= @artwork.description %></p>
       </div>
   </div>
 </div>
