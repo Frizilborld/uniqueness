@@ -1,3 +1,12 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
+<div class="cards-container-index">
+
+     <% @artworks.each do |artwork| %>
+      <%= link_to artwork_path(artwork) do %>
+        <%= render 'shared/card_index', artwork: artwork %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

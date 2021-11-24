@@ -7,17 +7,15 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.new(artwork_params)
 
     uploaded_file = UploadFileToApi.call(artwork_params[:photo])
-    raise
-    @artwork.color_tags_api_file_id = uploaded_file["file_id"]
 
-    report = GetColorTags.call
+    @artwork.color_tags_api_file_id = uploaded_file["file_id"]
+    report = GetColorTags.call(@file_id)
     @artwork.number_of_pixel_in_image = report["process"]
     @artwork.width = report["process"]
     @artwork.height = report["process"]
     @artwork.colors = report["process"]
-    raise
     @artwork.save
-    redirect_to artwork_path(@artwork)
+    redirect_to root_path(@artwork)
   end
 
   private
