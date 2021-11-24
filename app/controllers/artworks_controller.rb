@@ -1,5 +1,13 @@
 class ArtworksController < ApplicationController
+  def index
+  end
+
+  def show
+    @artwork = Artwork.find(params[:id])
+  end
+
   def new
+    @artwork = Artwork.new
   end
 
   def create
@@ -18,4 +26,9 @@ class ArtworksController < ApplicationController
 
   end
 
+  private
+
+  def artwork_params
+    params.require(:artwork).permit(:name, :description, :photo)
+  end
 end
