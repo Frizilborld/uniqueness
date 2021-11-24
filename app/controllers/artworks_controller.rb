@@ -1,5 +1,6 @@
 class ArtworksController < ApplicationController
   def index
+    @artwork = Artwork.all
   end
 
   def show
@@ -23,12 +24,6 @@ class ArtworksController < ApplicationController
     @artwork.colors = report["process"]
     @artwork.save
     redirect_to root_path(@artwork)
-  end
-
-  private
-
-  def artwork_params
-    params.require(:artwork).permit(:photo, :name, :description)
   end
 
   private
