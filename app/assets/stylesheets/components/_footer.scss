@@ -1,60 +1,61 @@
 .footer {
-  background:black;
+  background: white;
   display: flex;
-  border-radius: 10px;
   align-items: center;
   justify-content: space-between;
   height: 90px;
-  color: whitesmoke;
   padding-left: 35px;
   padding-right: 35px;
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 18px;
-
 }
-.footer-links {
+
+.footer-logos {
+  color: black;
   display: flex;
   align-items: center;
+}
+
+.footer-logos a:hover {
+  transform: scale(1.1);
+}
+
+.colored-icons:hover {
+  color: $uniq-primary
 }
 
 .colored-icons {
-  color: white
-}
-.footer-links a {
   color: black;
-  opacity: 0.55;
-  text-decoration: none;
   font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
 }
 
 .btn-footer {
-  justify-content: space-between;
+  justify-content: flex-end;
   display: flex;
-  align-items: center;
-  color: whitesmoke ;
-  background-color: black;
+  color: black;
+  font-family: $body-font;
 }
+
 .btn-footer a {
-  color: whitesmoke;
-  opacity: 0.55;
+  color: black;
   text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
+  font-size: 16px;
 }
+
 .btn-footer a:hover {
   opacity: 1;
+  color: $uniq-primary;
+  transform: scale(1.01);
 }
 
 .footer-brand  {
   width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-brand:hover  {
+  transform: scale(1.01);
 }
 
 #scroll_to_top {
@@ -67,6 +68,7 @@
     height: 100%;
   }
 }
+
 #scroll_to_top a {
   color: rgb(255, 255, 255);
   opacity: 0.55;
@@ -74,6 +76,7 @@
   font-size: 24px;
   padding: 0px 10px;
 }
+
 #scroll_to_top a:hover {
   opacity: 1;
 }
