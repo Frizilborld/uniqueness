@@ -1,66 +1,12 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-uniqueness">
-  <a class="navbar-brand" href="#">
-    <img src="app/images/logo_white_large.png" />
-    <%# <%= link_to image_tag('#'), root_path %> %>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="search">
-    <%# <%= simple_form_for :search, url: items_path, method: :get do |f| %>--> %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" placeholder="Search" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn-navbar">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-        <%# <% end %> %>
-  </div>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Explore</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Upload</a>
-      </li>
-      <li class="nav-item dropdown">
-        <img class="avatar-large dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="app/images/vitalik..jpeg" />
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
 
 <div class="cards-container-show">
   <div class="card-product-show">
-    <img src="https://img0.etsystatic.com/il_fullxfull.235009379.jpg"/>
-    <div class="card-product-infos-show">
-      <h2>Metamorphis</h2>
-      <p>Path <strong>soaked</strong> in autumn rain.</p>
-    </div>
-  </div>
-</div>
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab colored-icons fa-github"></i></a>
-    <a href="#"><i class="fab colored-icons fa-instagram"></i></a>
-    <a href="#"><i class="fab colored-icons fa-twitter"></i></a>
-  </div>
-  <a class="footer-brand" href="#">
-    <img src="app/images/logo_white_large.png" />
-  </a>
-
-  <div class="btn-footer">
-    <a href="#" target="blank" >Mint</a>
-    <a href="#" target="blank" >Mentions</a>
-    <a style="font-size: 15px" target="blank">2021</a>
+    <% if artwork.photo.attached? %>
+    <%= cl_image_tag artwork.photo.key %>
+    <% end %>
+      <div class="card-product-infos-show">
+        <h2><%= artwork.name %></h2>
+        <p><%= artwork.description %></p>
+      </div>
   </div>
 </div>
