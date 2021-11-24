@@ -7,3 +7,15 @@
 </div>
   <a class="btn btn-uniq-primary" href="#">Button primary</a>
   <a class="btn btn-uniq-secondary" href="#">Button secondary</a>
+
+
+  <div class="cards-container-index">
+  <div class="card-product-index">
+   <% @artworks.each do |artwork| %>
+  <% if artwork.photo.attached? %>
+    <%= cl_image_tag artwork.photo.key %>
+  <% end %>
+  <p class=""><%= artwork.name %></p>
+  <% end %>
+   </div>
+</div>
