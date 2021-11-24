@@ -1,12 +1,12 @@
 .card-product-show {
   display: block;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: black;
   background-size: cover;
   margin-top: 30px;
   margin-bottom: 35px;
-  font-family: 'Rajdhani', sans-serif;
-  border: 1px solid black;
+  font-family: $headers-font;
+  border: 1px solid whitesmoke;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   border-radius: 2px;
 }
@@ -21,7 +21,7 @@
   font-weight: bold;
   margin: 0;
   text-align: left;
-  color: black;
+  color:whitesmoke;
 }
 
 .card-product-show p {

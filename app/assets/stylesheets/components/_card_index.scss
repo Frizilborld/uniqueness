@@ -1,17 +1,19 @@
 .card-product-index {
+  color: whitesmoke;
   display: block;
   flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
   text-align: center;
-  background-color: white;
+  background-color: black;
   background-size: cover;
   margin-top: 30px;
   margin-bottom: 35px;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: $headers-font;
   border: 1px solid black;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   border-radius: 2px;
+  text-decoration: none;
 }
 
 .card-product-index img {
@@ -19,6 +21,7 @@
   text-align: center;
   height: 260px;
   width: 340px;
+  text-decoration: none;
 }
 
 .card-product-index h2 {
@@ -26,7 +29,8 @@
   font-weight: bold;
   margin: 0;
   text-align: left;
-  color: black;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 .card-product-index p {
@@ -36,13 +40,17 @@
   margin-bottom: 0;
   margin-top: 8px;
   text-align: left;
-  color: #404E5C;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
+.card-product-index .card-product-infos-index a {
+text-decoration: none;
+}
 .card-product-index .card-product-infos-index {
-  padding: 80px 20px 10px 10px;
+
   margin-bottom: auto;
-  border-radius: 8px;
+
   justify-content: left;
 }
 
@@ -53,7 +61,8 @@
   width: 100%;
   justify-content: space-around;
   border: rgb(0, 0, 0);
-  background-color:#E5E9EC;
+  background-color: black;
+  text-decoration: none;
 
 }
 
