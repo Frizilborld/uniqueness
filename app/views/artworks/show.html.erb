@@ -1,7 +1,8 @@
 <div class="cards-container-show">
   <div class="card-product-show">
 
-    <%= cl_image_tag @artwork.photo.key %>
+    <%= cl_image_tag @artwork.photo.key %><br>
+      <%= link_to "Redirect to OpenSea", "https://opensea.io/", class: "btn btn-flat", target: "_blank" %>
 
       <div class="card-product-infos-show">
         <h2><%= @artwork.name %></h2>
