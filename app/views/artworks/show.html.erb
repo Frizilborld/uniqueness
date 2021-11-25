@@ -1,6 +1,11 @@
 <div class="cards-container-show">
   <div class="card-show-info">
     <ul>
+      <div class="card-product-infos-show">
+        <h2><%= @artwork.name %></h2>
+        <p><%= @artwork.description %></p>
+      </div>
+
       <p>Width : <%= @artwork.width %></p>
       <p>Height : <%= @artwork.height %></p>
       <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
@@ -12,14 +17,12 @@
 
     <%= cl_image_tag @artwork.photo.key %>
 
-      <div class="card-product-infos-show">
-        <h2><%= @artwork.name %></h2>
-        <p><%= @artwork.description %></p>
-      </div>
-
   </div>
 
   <div class="card-show-info">
-
+    <ul>
+    <p>Rate this artwork :</p>
+    <p>Give us your estimate price:   £</p>
+    </ul>
   </div>
 </div>
