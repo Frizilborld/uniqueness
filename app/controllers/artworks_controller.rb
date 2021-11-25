@@ -5,6 +5,10 @@ class ArtworksController < ApplicationController
     @artworks = Artwork.all
   end
 
+  def debug_score
+    @artworks = Artwork.where.not(number_of_pixel_in_image: nil)
+  end
+
   def show
     @artwork = Artwork.find(params[:id])
     @artwork_price = ArtworkPrice.new
@@ -29,6 +33,8 @@ class ArtworksController < ApplicationController
     @artwork.height = report["result"]["height"]
     @artwork.colors = report["result"]["colors"]
     @artwork.save!
+
+    Artworks::ComputeScore.call(@artwork)
 
     redirect_to artwork_path(@artwork)
   end

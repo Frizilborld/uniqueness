@@ -137,7 +137,13 @@ image11.upvotes.new(user_id: User.all.sample.id)
 image11.save!
 
 file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_SQ0jGYFU9qq6EE6hx0UgE9fZsFHQk49-g&usqp=CAU')
-image12 = Artwork.new(name: "Toad", description: "The toad's despair", user_id: jean_potin.id)
+image12 = Artwork.new(name: "Toad", description: "The toad's despair", user_id: jean_potin.id,
+  "height"=>162,
+  "width"=>311,
+  "number_of_pixel_in_image"=>50382,
+  "colors"=> [{"red"=>63, "green"=>184, "blue"=>207, "percentage"=>"72.81", "number_of_pixel"=>36685, "hex"=>"#3fb8cf"},
+  {"red"=>103, "green"=>43, "blue"=>53, "percentage"=>"27.19", "number_of_pixel"=>13697, "hex"=>"#672b35"}]
+)
 image12.photo.attach(io: file, filename: 'Toad.jpg', content_type: 'image/png')
 image12.upvotes.new(user_id: User.all.sample.id)
 image12.upvotes.new(user_id: User.all.sample.id)
@@ -146,6 +152,7 @@ image12.upvotes.new(user_id: User.all.sample.id)
 image12.upvotes.new(user_id: User.all.sample.id)
 image12.upvotes.new(user_id: User.all.sample.id)
 image12.save!
+Artworks::ComputeScore.call(image12)
 
 file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FJRK3icwSzVeKXpX_munMs7Jhj4j-S9sP_Zjx1IatToaMvCSzMlX1awnqtfMsAvdb8o&usqp=CAU')
 image13 = Artwork.new(name: "Spell", description: 'The origin of the world', user_id: mili_botis.id)
