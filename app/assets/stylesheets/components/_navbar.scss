@@ -1,19 +1,29 @@
 .navbar-uniqueness {
   justify-content: space-between;
   background:black;
-  border-bottom: 1px solid #404E5C;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  padding-bottom: 100px;
+  padding-top: 30px;
 }
 
 .navbar-uniqueness .navbar-collapse {
   flex-grow: 0;
-  color: red;
 }
 
 .navbar-uniqueness .navbar-brand img {
-  width: 250px;
+  width: 350px;
   margin-left: 10px;
 }
 .navbar-light .navbar-nav .nav-link {
-    color:whitesmoke;
+    color:white;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #a9a9a9;
+}
+
+a.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
 }
