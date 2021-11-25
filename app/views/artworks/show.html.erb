@@ -1,16 +1,34 @@
 <div class="cards-container-show">
-  <div class="card-product-show">
-
-    <%= cl_image_tag @artwork.photo.key %>
-
+  <div class="card-show-info">
+    <ul>
       <div class="card-product-infos-show">
         <h2><%= @artwork.name %></h2>
         <p><%= @artwork.description %></p>
+        <p><%= @artwork.upvotes.count %></p>
       </div>
 
       <p>Width : <%= @artwork.width %></p>
       <p>Height : <%= @artwork.height %></p>
       <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
       <p>Colors : <%= @artwork.colors %></p>
+    </ul>
   </div>
+
+  <div class="card-product-show">
+
+    <%= cl_image_tag @artwork.photo.key %><br>
+    <%= link_to "Redirect to marketplace", "https://superrare.com/sign-in", class: "btn btn-flat", target: "_blank" %>
+
+  </div>
+
+  <div class="card-show-info">
+    <ul>
+    <p>Rate this artwork :</p>
+    <p>Give us your estimate price:   £</p>
+    </ul>
+  </div>
+
+  <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
+  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post %>
+  <% end %>
 </div>

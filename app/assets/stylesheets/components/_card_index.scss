@@ -22,6 +22,9 @@
   height: 260px;
   width: 340px;
   text-decoration: none;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
 }
 
 .card-product-index h2 {
@@ -68,4 +71,8 @@ text-decoration: none;
 
 .card-product-index:hover {
   transform: scale(1.01);
+}
+a {
+  text-decoration: none;
+
 }
