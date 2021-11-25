@@ -22,6 +22,9 @@
   height: 260px;
   width: 340px;
   text-decoration: none;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
 }
 
 .card-product-index h2 {
