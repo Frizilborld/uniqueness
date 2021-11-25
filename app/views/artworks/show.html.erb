@@ -1,4 +1,13 @@
 <div class="cards-container-show">
+  <div class="card-show-info">
+    <ul>
+      <p>Width : <%= @artwork.width %></p>
+      <p>Height : <%= @artwork.height %></p>
+      <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
+      <p>Colors : <%= @artwork.colors %></p>
+    </ul>
+  </div>
+
   <div class="card-product-show">
 
     <%= cl_image_tag @artwork.photo.key %>
@@ -8,9 +17,9 @@
         <p><%= @artwork.description %></p>
       </div>
 
-      <p>Width : <%= @artwork.width %></p>
-      <p>Height : <%= @artwork.height %></p>
-      <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
-      <p>Colors : <%= @artwork.colors %></p>
+  </div>
+
+  <div class="card-show-info">
+
   </div>
 </div>
