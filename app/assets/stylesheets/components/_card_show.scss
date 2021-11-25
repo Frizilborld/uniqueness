@@ -8,6 +8,7 @@
   font-family: $headers-font;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   border-radius: 2px;
+
 }
 
 .card-product-show img {
@@ -49,7 +50,6 @@
   width: 100%;
   justify-content: space-around;
   float: right;
-  margin-right: 20px;
   background-color: black;
   color: whitesmoke;
   font-family: $headers-font;
@@ -70,44 +70,20 @@ font-family: $headers-font;
 
 //en dessous cest le bouton redirect to
 
-.btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-}
-
-.btn-ghost:hover {
-  opacity: 1;
-}
 
 .btn-flat {
-  color: white;
+  color: black;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #1EDD88;
-  transition: background 0.3s ease;
+  background: darkgray;
+  transition: darkgray 0.2s ease;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 25px;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
-  color: white;
-}
-
-.btn-gradient {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: linear-gradient(#167FFB, #0F60C4);
-  transition: background 0.3s ease;
-  border: 1px solid #0F60C4;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(#147EFF, #0F67DA);
-  color: white;
+  background: black;
+  color: darkgray;
 }
