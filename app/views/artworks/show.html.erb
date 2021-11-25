@@ -5,7 +5,7 @@
         <h2><%= @artwork.name %></h2>
         <p><%= @artwork.description %></p>
         <p><%= @artwork.upvotes.count %></p>
-        <p><%= @artwork.artwork_prices.count %></p>
+        <p><%= @artwork.artwork_prices.average(:price_estimation) %></p>
       </div>
 
       <p>Width : <%= @artwork.width %></p>
