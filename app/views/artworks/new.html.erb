@@ -1,11 +1,16 @@
-<h1>Want a score for your Artwork?</h1>
-<h2>Upload your artwork</h2>
-<h3>Get a rarity score</h3>
-<h4>Register it in our library to be seen by our community</h4>
+<div class="home-container">
+<ul>
+<h1>Be part of our community and upload your artwork</h1>
+<h4>Research the prices of comparable artists</h4>
+<h4>Do not undersell your work or yourself</h4>
+<h4>Have confidence and stand by your price</h4>
+<h4>Do not let emotions get in the way</h4>
 
+</ul>
 <%= simple_form_for @artwork do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit 'Upload and compare' %>
+  <%= f.submit 'Upload' %>
 <% end %>
+</div>
