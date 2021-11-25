@@ -5,6 +5,7 @@
         <h2><%= @artwork.name %></h2>
         <p><%= @artwork.description %></p>
         <p><%= @artwork.upvotes.count %></p>
+        <p><%= @artwork.artwork_prices.count %></p>
       </div>
 
       <p>Width : <%= @artwork.width %></p>
@@ -30,5 +31,11 @@
 
   <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
   <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post %>
+  <% end %>
+
+  <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
+  <%= simple_form_for [@artwork, @artwork_price] do |f| %>
+  <%= f.input :price_estimation %>
+  <% end %>
   <% end %>
 </div>
