@@ -34,6 +34,8 @@ class ArtworksController < ApplicationController
     @artwork.colors = report["result"]["colors"]
     @artwork.save!
 
+    Artworks::ComputeScore.call(@artwork)
+
     redirect_to artwork_path(@artwork)
   end
 

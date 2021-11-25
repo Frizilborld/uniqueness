@@ -1,5 +1,8 @@
 module Artworks
   class ComputeScore
+    # reload!
+    # Artwork.where.not(number_of_pixel_in_image: nil).each { |artwork| Artworks::ComputeScore.call(artwork) } ; nil
+
     def self.call(artwork)
       new(artwork).call
     end
@@ -15,6 +18,12 @@ module Artworks
     end
 
     private
+
+    def pixels_score
+      base_photo_size = 1920 * 1080
+
+      (@artwork.number_of_pixel_in_image.to_f / base_photo_size) * 100
+    end
 
     def color_score
       color_1, color_2 = @artwork.colors
@@ -37,12 +46,6 @@ module Artworks
       pctdiff_blue   = diff_blue  / 255
 
       return (pctdiff_ref + pctdiff_green + pctdiff_blue) / 3 * 100
-    end
-
-    def pixels_score
-      base_photo_size = 1920 * 1080
-
-      (@artwork.number_of_pixel_in_image.to_f / base_photo_size) * 100
     end
   end
 end
