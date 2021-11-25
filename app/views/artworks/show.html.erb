@@ -28,5 +28,7 @@
     </ul>
   </div>
 
+  <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
   <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post %>
+  <% end %>
 </div>
