@@ -6,6 +6,7 @@
       <div class="card-product-infos-show">
         <h2><%= @artwork.name %></h2>
         <p><%= @artwork.description %></p>
+        <p><%= @artwork.upvotes.count %></p>
       </div>
 
       <p>Width : <%= @artwork.width %></p>
@@ -13,4 +14,6 @@
       <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
       <p>Colors : <%= @artwork.colors %></p>
   </div>
+
+  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post %>
 </div>
