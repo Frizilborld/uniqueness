@@ -1,55 +1,70 @@
 .home-container {
   display: flex;
-  justify-content: space-around;
-  height: 100vh;
-  background-color: black;
+  justify-content: space-between;
+  height: 75vh;
   color: whitesmoke;
   font-family: $headers-font;
-  width: 100vw;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto 5vh auto;
 }
 
 .half-home-1 {
-  width: 100vh;
-  height: 90vh;
-  background-color: black;
+  width: 46%;
+  height: 100%;
   justify-content: center;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
+  h1 {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  h5{
+    font-size: 24px;
+    text-align: justify;
+    margin-bottom: 50px;
 
+
+  }
+}
+
+.color-blue {
+  color: #01719e;
 }
 
 .half-home-2 {
-  width: 100vh;
-  height: 90vh;
-  background-color: black;
+  width: 46%;
+  height: 100%;
   padding: 25px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 }
 
 .half-home-3 {
-  width: 100vh;
-  height: 90vh;
-  background-color: black;
-
+  width: 49%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .half-home-4 {
-  width: 100vh;
-  height: 90vh;
-  background-color: black;
+  width: 49%;
+  height: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
-
-}
-.home-img img {
-  width: 100vh;
-  height: 90vh;
-  object-fit: contain;
-}
-
-.home-img-2 img {
-  width: 50vh;
-  height: 45vh;
-  object-fit: contain;
+  justify-content: space-between;
+  img {
+    width: 35vw;
+    height: 25vh;
+  }
 }
