@@ -86,3 +86,18 @@ font-family: $headers-font;
   background: black;
   color: darkgray;
 }
+
+.btn-uniqueness-show {
+    background-color: white;
+    color: black;
+    padding: 12px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+    height: 30px;
+}

@@ -1,0 +1,12 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Dashboard</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+   <%= link_to 'Sign in', new_user_session_path, class:  'btn-uniqueness' %>
+   <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:  'btn-uniqueness' %>
+   <%= link_to 'Upload an artwork', new_artwork_path, class:  'btn-uniqueness' %>
+   <%= link_to 'My artworks', dashboard_path, class:  'btn-uniqueness' %>
+  </div>
+</div>

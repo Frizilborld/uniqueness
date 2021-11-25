@@ -27,15 +27,10 @@
 
   </div>
 
-  <div class="card-show-info">
-    <ul>
-    <p>Rate this artwork :</p>
-    <p>Give us your estimate price:   £</p>
-    </ul>
-  </div>
+
 
   <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post %>
+  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-show' %>
   <% end %>
 
   <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
@@ -44,3 +39,5 @@
   <% end %>
   <% end %>
 </div>
+
+<%= render 'shared/burger_menu' %>
