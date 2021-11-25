@@ -1,5 +1,4 @@
 .footer {
-  // background: white;
   height: 20vh;
   .wrapper-footer {
     max-width: 1500px;
@@ -12,6 +11,15 @@
     color: white;
     font-size: 20px;
   }
+}
+
+.fab:hover{
+  transform: scale(1.1);
+}
+
+a:hover{
+  transform: scale(1.1);
+  color: darkgray;
 }
 
 .footer-brand {
