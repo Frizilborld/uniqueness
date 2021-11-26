@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
-puts "🗑 Purge"
+puts "🗑 Purging"
 ActiveStorage::Attachment.all.each { |attachment| attachment.purge }
 
 Artwork.destroy_all
 User.destroy_all
-puts 'Seed Destroy'
+puts 'Seed Destroyed'
 
 rayane = User.create!(name: "Rayane", email: 'rayane@hotmail.com', password: '123456')
 artion = User.create!(name: "Artion", email: 'artion@hotmail.com', password: '123456')
