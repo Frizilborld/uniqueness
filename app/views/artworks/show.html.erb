@@ -12,9 +12,8 @@
       <br>
       <br>
       Upvotes ---> <%= @artwork.upvotes.count %>
-      <br>
-      <br>
-      Number of voters ---> <%= @artwork.artwork_prices.count %>
+
+      <!--Number of voters <%= @artwork.artwork_prices.count %> --->
       <br>
       <br>
       Users estimate price ---> <%= @artwork.artwork_prices.average(:price_estimation) %>
@@ -38,4 +37,3 @@
   </div>
 </div>
 <%= render 'shared/burger_menu' %>
-
