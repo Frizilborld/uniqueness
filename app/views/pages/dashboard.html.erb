@@ -1,5 +1,9 @@
-<% @my_artworks.each do |artwork| %>
-          <%= link_to artwork_path(artwork) do %>
-            <%= render 'shared/card_index', artwork: artwork %>
-          <% end %>
-        <% end %>
+<div class="cards-container-index">
+  <% @my_artworks.each do |artwork| %>
+    <%= link_to artwork_path(artwork) do %>
+    <%= render 'shared/card_index', artwork: artwork %>
+    <% end %>
+  <% end %>
+  </div>
+
+<%= render 'shared/burger_menu' %>
