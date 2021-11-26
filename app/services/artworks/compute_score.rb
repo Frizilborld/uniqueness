@@ -12,7 +12,7 @@ module Artworks
     end
 
     def call
-      score = pixels_score * 0.7 + color_score * 1.7
+      score = pixels_score * 0.5 + color_score * 1.7
 
       @artwork.update!(score: score)
     end
