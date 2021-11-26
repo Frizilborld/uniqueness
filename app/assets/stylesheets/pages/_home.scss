@@ -73,6 +73,21 @@
     height: 25vh;
     object-fit: cover;
   }
+  h2{
+    font-family: $headers-font;
+    font-size: 55px;
+    font-weight: bold;
+  }
+  h3 .color-orange{
+    font-family: $headers-font;
+    font-size: 65px;
+    font-weight: bold;
+  }
+  h3 {
+    font-family: $headers-font;
+    font-size: 35px;
+    padding-bottom: 68px;
+  }
 }
 
 .home-container-session {
