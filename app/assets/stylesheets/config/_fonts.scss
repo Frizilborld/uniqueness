@@ -1,11 +1,10 @@
 // Import Google fonts
 // @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Playfair+Display&family=Rajdhani&family=Raleway:wght@200&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Playfair+Display:wght@400;700&family=Rajdhani&family=Raleway:wght@200&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Playfair Display", serif;
+$body-font: "Lato", serif;
 $headers-font: "Playfair Display", serif;
 
 
@@ -18,3 +17,13 @@ $headers-font: "Playfair Display", serif;
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+
+ul {
+  list-style-type: square;
+
+  li {
+    font-size: 20px;
+  }
+
+}
