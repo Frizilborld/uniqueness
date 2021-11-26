@@ -13,6 +13,7 @@ class SeedsInApi
     @artwork.colors = report["result"]["colors"]
     @artwork.save!
 
-    Artworks::ComputeScore.call(@artwork)
+    score = Artworks::ComputeScore.call(@artwork)
+    return score
   end
 end
