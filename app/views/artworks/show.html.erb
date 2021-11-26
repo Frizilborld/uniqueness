@@ -28,16 +28,18 @@
   </div>
 
 
-
-  <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-show' %>
-  <% end %>
-
-  <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
+  <div class="card-input-user">
+    <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
   <%= simple_form_for [@artwork, @artwork_price] do |f| %>
   <%= f.input :price_estimation %>
   <% end %>
   <% end %>
+  <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
+  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
+  <% end %>
+
+
+  </div>
 </div>
 
 <%= render 'shared/burger_menu' %>
