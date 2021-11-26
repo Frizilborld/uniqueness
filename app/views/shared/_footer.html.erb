@@ -11,8 +11,11 @@
       <a href="https://twitter.com/rarible" target="blank" class="mx-3"><i class="fab fa-twitter"></i></a>
     </div>
     <div class="d-flex align-items-center justify-content-center col-4 px-0">
-      <%= link_to image_tag('logo_white_large.png', class: "footer-brand"), root_path %>
+      <%= link_to "#top" do %>
+      <%= image_tag('logo_white_large.png', class: "footer-brand") %>
+      <% end %>
     </div>
+
     <div class="d-flex align-items-center justify-content-end col-4 px-0">
       <a href="#" target="blank" class="mx-2">About Us</a>
       <a href="#" target="blank" class="mx-2">Contact</a>
