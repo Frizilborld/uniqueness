@@ -44,3 +44,46 @@
     color: white;
   }
 }
+
+.btn-uniqueness-signin {
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  width: 80px;
+  height: 40px;
+  &:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+  }
+}
+
+.btn-uniqueness-forgot {
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  width: 175px;
+  height: 56px;
+
+  &:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+  }
+}
