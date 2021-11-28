@@ -1,4 +1,5 @@
 require 'open-uri'
+# Artwork.where.not(number_of_pixel_in_image: nil).pluck(:name, :height, :width, :number_of_pixel_in_image, :colors, :score)
 
 module Artworks
   class SeedsInApi
