@@ -2,7 +2,11 @@ class ArtworksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @artworks = Artwork.all
+     if params[:query].present?
+      @artworks = Artwork.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @artworks = Artwork.all
+    end
   end
 
   def debug_score

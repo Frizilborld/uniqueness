@@ -7,15 +7,16 @@
         <br>
         <br>
         <br>
-        <p><p>Upvotes:</p><%= @artwork.upvotes.count %></p>
-        <p><p>Number of voters:</p><%= @artwork.artwork_prices.count %></p>
-        <p><p>Users estimate price:</p><%= @artwork.artwork_prices.average(:price_estimation) %></p>
+        <p><p>Upvotes: <%= @artwork.upvotes.count %></p>
+        <%# <p><p>Number of voters:</p><%= @artwork.artwork_prices.count %></p>
+        <p><p>Users estimated price:</p><%= @artwork.artwork_prices.average(:price_estimation) %></p>
       </div>
 
-      <p>Width : <%= @artwork.width %></p>
-      <p>Height : <%= @artwork.height %></p>
-      <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
-      <p>Colors : <%= @artwork.colors %></p>
+      <p>Score : <%= @artwork.score %></p>
+      <%# <p>Width : <%= @artwork.width %></p>
+      <%# <p>Height : <%= @artwork.height %></p>
+      <%# <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
+      <%# <p>Colors : <%= @artwork.colors %></p>
     </ul>
   </div>
 

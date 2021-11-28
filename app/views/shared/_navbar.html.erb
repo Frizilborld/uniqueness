@@ -3,13 +3,17 @@
     <div class="navbar-brand">
       <%= link_to image_tag('logo_white_large.png'), root_path %>
     </div>
+
     <div class="search">
-      <%= simple_form_for :search, url: artworks_path, method: :get do |f| %>
+      <%= form_tag artworks_path, method: :get do %>
         <div class="search-form-control form-group">
-          <input class="form-control string required" placeholder="Explore" type="text" name="search[query]" id="search_query" />
-          <button name="button" type="submit" class="btn btn-navbar">
-            <i class="fas fa-search"></i>
-          </button>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control string required",
+            placeholder: "Search"
+          %>
+          <%# <%= submit_tag , class: "btn btn-navbar" %>
+
         </div>
       <% end %>
     </div>
