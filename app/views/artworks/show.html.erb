@@ -1,6 +1,7 @@
 <div class="cards-container-show">
   <div class="card-show-info">
     <ul>
+
       <div class="card-product-infos-show">
         <h2><%= @artwork.name %></h2>
         <p><%= @artwork.description %></p>
@@ -13,34 +14,21 @@
       </div>
 
       <p>Score : <%= @artwork.score %></p>
-      <%# <p>Width : <%= @artwork.width %></p>
-      <%# <p>Height : <%= @artwork.height %></p>
-      <%# <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
-      <%# <p>Colors : <%= @artwork.colors %></p>
+
+    <div class="card-input-user">
+      <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
+      <%= simple_form_for [@artwork, @artwork_price] do |f| %>
+      <%= f.input :price_estimation %>
+      <% end %>
+      <% end %>
+      <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
+      <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
+      <% end %>
+    </div>
     </ul>
   </div>
-
   <div class="card-product-show">
-
     <%= cl_image_tag @artwork.photo.key %><br>
-
-    <%= link_to "Redirect to marketplace", "https://superrare.com/sign-in", class: "btn-uniqueness", target: "_blank" %>
-
-  </div>
-
-
-  <div class="card-input-user">
-    <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
-  <%= simple_form_for [@artwork, @artwork_price] do |f| %>
-  <%= f.input :price_estimation %>
-  <% end %>
-  <% end %>
-  <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-  <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
-  <% end %>
-
-
   </div>
 </div>
-
 <%= render 'shared/burger_menu' %>
