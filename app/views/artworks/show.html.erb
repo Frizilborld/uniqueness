@@ -1,25 +1,20 @@
 <div class="cards-container-show">
   <div class="card-show-info">
     <ul>
-    <div class="card-product-infos-show">
-      <h2><%= @artwork.name %></h2>
-      <p><%= @artwork.description %></p>
-      <br>
-      <br>
-      <br>
-      Originality rate --->  <%= @artwork.score %>
-      <br>
-      <br>
-      <br>
-      Upvotes ---> <%= @artwork.upvotes.count %>
 
-      <!--Number of voters <%= @artwork.artwork_prices.count %> --->
-      <br>
-      <br>
-      Users estimate price ---> <%= @artwork.artwork_prices.average(:price_estimation) %>
-    </div>
-    <br>
-      <br>
+      <div class="card-product-infos-show">
+        <h2><%= @artwork.name %></h2>
+        <p><%= @artwork.description %></p>
+        <br>
+        <br>
+        <br>
+        <p><p>Upvotes: <%= @artwork.upvotes.count %></p>
+        <%# <p><p>Number of voters:</p><%= @artwork.artwork_prices.count %></p>
+        <p><p>Users estimated price:</p><%= @artwork.artwork_prices.average(:price_estimation) %></p>
+      </div>
+
+      <p>Score : <%= @artwork.score %></p>
+
     <div class="card-input-user">
       <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
       <%= simple_form_for [@artwork, @artwork_price] do |f| %>
