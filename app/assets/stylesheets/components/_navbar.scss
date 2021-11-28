@@ -53,12 +53,13 @@ a.dropdown-toggle {
 
     .burger-link {
       color: white;
-      font-size: 24px;
+      font-size: 22px;
       text-align: center;
       margin-bottom: 20px;
-
+      opacity: 0.55;
       &:hover {
-        -webkit-text-stroke: 1px;
+        color: whitesmoke;
+        opacity: 1;
       }
     }
   }
