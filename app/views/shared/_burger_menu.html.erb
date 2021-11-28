@@ -7,7 +7,10 @@
    <%= link_to 'Explore', artworks_path, class:  'burger-link' %>
    <%= link_to 'My artworks', dashboard_path, class:  'burger-link' %>
    <%= link_to 'Upload an artwork', new_artwork_path, class:  'burger-link' %>
-   <%= link_to 'Sign in', new_user_session_path, class:  'burger-link' %>
-   <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:  'burger-link' %>
+    <% if current_user %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:  'burger-link' %>
+    <% else %>
+      <%= link_to 'Sign in/Log in', new_user_session_path, class:  'burger-link' %>
+    <%end %>
   </div>
 </div>
