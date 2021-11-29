@@ -19,31 +19,43 @@
         <% if @artwork.score.between?(0, 78)#1étoiles %>
           <%= @artwork.score %> <br>
           <i class='fas fa-star'></i>
-          <%# <br><p>Petite explication</p> %>
+          <% 4.times do %>
+            <i class="far fa-star"></i>
+          <% end %>
         <% elsif @artwork.score.between?(78, 96)#2étoiles %>
           <%= @artwork.score %> <br>
           <% 2.times do %>
             <i class='fas fa-star'></i>
           <% end %>
-          <%# <br><p>Petite explication</p> %>
+          <% 3.times do %>
+            <i class="far fa-star"></i>
+          <% end %>
         <% elsif @artwork.score.between?(96, 114)#3étoiles %>
           <%= @artwork.score %> <br>
           <% 3.times do %>
             <i class='fas fa-star'></i>
           <% end %>
-          <%# <br><p>Petite explication</p> %>
+          <% 2.times do %>
+            <i class="far fa-star"></i>
+          <% end %>
         <% elsif @artwork.score.between?(114, 132)#4étoiles %>
           <%= @artwork.score %> <br>
           <% 4.times do %>
             <i class='fas fa-star'></i>
           <% end %>
-          <%# <br><p>Petite explication</p> %>
-        <% elsif @artwork.score.between?(132, 250)#5étoiles %>
+          <% 1.times do %>
+            <i class="far fa-star"></i>
+          <% end %>
+        <% elsif @artwork.score.between?(132, 150)#5étoiles %>
           <%= @artwork.score %> <br>
           <% 5.times do %>
             <i class='fas fa-star'></i>
           <% end %>
-          <%# <br><p>Petite explication</p> %>
+        <% elsif @artwork.score.between?(150, 250)#5goldétoiles %>
+        <%= @artwork.score %> <br>
+        <% 5.times do %>
+          <i class='fas fa-star' style="color: yellow;"></i>
+        <% end %>
         <% else %>
           NO RATE YET
         <% end %>
@@ -82,3 +94,6 @@
 </div>
 
 <%= render 'shared/burger_menu' %>
+
+
+<%= image_tag("logo_white_favicon.png", height: 18, width: 18) %>
