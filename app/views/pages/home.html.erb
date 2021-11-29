@@ -6,12 +6,17 @@
       <%= link_to 'Explore', artworks_path, class:  'btn-uniqueness' %>
     </div>
     <div class="half-home-2">
+     <%= link_to artworks_path do %>
       <%= image_tag('unsplash_NTYYL9Eb9y8.jpg') %>
+       <% end %>
     </div>
   </div>
   <div class="home-container">
     <div class="half-home-3">
+    <%= link_to artwork_path(@artworks[0]) do %>
       <%= cl_image_tag @artworks[0].photo.key %>
+    <% end %>
+
     </div>
     <div class="half-home-4">
 
@@ -19,8 +24,15 @@
       <h3><span class="color-orange">3 </span>Pieces</h3>
 
       <div class="w-100">
-        <%= cl_image_tag @artworks[1].photo.key %>
-        <%= cl_image_tag @artworks[2].photo.key %>
+       <%= link_to artwork_path(@artworks[1]) do %>
+          <%= cl_image_tag @artworks[1].photo.key %>
+        <% end %>
+
+
+        <%= link_to artwork_path(@artworks[2]) do %>
+          <%= cl_image_tag @artworks[2].photo.key %>
+        <% end %>
+
       </div>
     </div>
   </div>
