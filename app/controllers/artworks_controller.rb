@@ -18,6 +18,8 @@ class ArtworksController < ApplicationController
     @artwork_price = ArtworkPrice.new
   end
 
+
+
   def new
     @artwork = Artwork.new
   end
@@ -41,11 +43,18 @@ class ArtworksController < ApplicationController
     Artworks::ComputeScore.call(@artwork)
 
     redirect_to artwork_path(@artwork)
+
+  end
+
+  def update
+    @artwork = Artwork.find(params[:id])
+    @artwork.update(artwork_params)
+    redirect_to artwork_path(@artwork)
   end
 
   private
 
   def artwork_params
-    params.require(:artwork).permit(:name, :description, :photo)
+    params.require(:artwork).permit(:name, :description, :photo, :marketplace_url)
   end
 end
