@@ -2,7 +2,8 @@ class PagesController < ApplicationController
   before_action :authenticate_user!, only: [ :dashboard ]
 
   def home
-    @artworks = Artwork.all
+    @artist_of_the_month = User.find_by_name('Harun Ayhan')
+    @artworks = Artwork.where(user: @artist_of_the_month).sample(3)
   end
 
   def dashboard
