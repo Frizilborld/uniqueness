@@ -62,13 +62,21 @@
       <% else %>
         NO RATE YET
       <% end %></p>
+
+      <div>
+        <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
+          <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
+        <% end %>
+      </div>
+
     </ul>
   </div>
+
+  
 
   <div class="card-product-show">
 
     <%= cl_image_tag @artwork.photo.key %><br>
-
     <%# <%= link_to "Redirect to marketplace", @artwork.marketplace_url, class: "btn-uniqueness", target: "_blank" %>
 
   </div>
@@ -86,14 +94,6 @@
       <%# <%= f.submit %>
     <%# <% end %>
 
-
-    <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-      <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
-    <% end %>
-  </div>
 </div>
 
 <%= render 'shared/burger_menu' %>
-
-
-<%= image_tag("logo_white_favicon.png", height: 18, width: 18) %>
