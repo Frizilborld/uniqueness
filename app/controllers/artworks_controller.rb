@@ -45,13 +45,6 @@ class ArtworksController < ApplicationController
     else
       render :new
     end
-
-    @artwork.save!
-
-    Artworks::ComputeScore.call(@artwork)
-
-    redirect_to artwork_path(@artwork)
-
   end
 
   def update
