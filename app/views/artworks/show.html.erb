@@ -9,7 +9,6 @@
         <br>
         <br>
 
-        <p>Upvotes: <%= @artwork.upvotes.count %></p>
         <%# <p>Number of voters:</p><%= @artwork.artwork_prices.count %>
         <%# <p>Users estimated price: <%= @artwork.artwork_prices.average(:price_estimation)</p> %>
       </div>
@@ -68,11 +67,11 @@
           <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
         <% end %>
       </div>
-
+        <p>Upvotes: <%= @artwork.upvotes.count %></p>
     </ul>
   </div>
 
-  
+
 
   <div class="card-product-show">
 
