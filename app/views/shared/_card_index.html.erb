@@ -10,15 +10,16 @@
 
       <% if artwork.score %>
         <% if artwork.score.between?(0, 50) %>
-          yes
+          GOOD
         <% elsif artwork.score.between?(50, 100) %>
-          no
+          NOT GOOD
         <% else %>
-        nothing
+          BLC
         <% end %>
       <% else %>
-        no score
+        NO SCORE
       <% end %>
+      <%= artwork.score %>
 
       <% if display_score %>
         |<%= artwork.score %>|
