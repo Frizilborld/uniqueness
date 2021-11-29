@@ -6,12 +6,25 @@
 
   <div class="card-product-infos-index">
     <h2>
-      <%= artwork.name %>
+      <%= artwork.name %><br>
+
+      <% if artwork.score %>
+        <% if artwork.score.between?(0, 50) %>
+          yes
+        <% elsif artwork.score.between?(50, 100) %>
+          no
+        <% else %>
+        nothing
+        <% end %>
+      <% else %>
+        no score
+      <% end %>
 
       <% if display_score %>
         |<%= artwork.score %>|
       <% end %>
     </h2>
     <p><%= artwork.description %></p>
+
   </div>
 </div>
