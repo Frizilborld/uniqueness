@@ -7,16 +7,49 @@
         <br>
         <br>
         <br>
-        <p><p>Upvotes: <%= @artwork.upvotes.count %></p>
-        <%# <p><p>Number of voters:</p><%= @artwork.artwork_prices.count %></p>
-        <%# <p><p>Users estimated price:</p><%= @artwork.artwork_prices.average(:price_estimation) %>
+
+        <p>Upvotes: <%= @artwork.upvotes.count %></p>
+        <%# <p>Number of voters:</p><%= @artwork.artwork_prices.count %>
+        <p>Users estimated price:</p><%= @artwork.artwork_prices.average(:price_estimation) %>
+      
       </div>
 
-      <p>Score : <%= @artwork.score %></p>
-      <%# <p>Width : <%= @artwork.width %></p>
-      <%# <p>Height : <%= @artwork.height %></p>
-      <%# <p>Pixels : <%= @artwork.number_of_pixel_in_image %></p>
-      <%# <p>Colors : <%= @artwork.colors %></p>
+      <p>Score :
+      <% if @artwork.score %>
+        <% if @artwork.score.between?(60, 78)#1étoiles %>
+          <%= @artwork.score %> <br>
+          <i class='fas fa-star'></i>
+          <%# <br><p>Petite explication</p> %>
+        <% elsif @artwork.score.between?(78, 96)#2étoiles %>
+          <%= @artwork.score %> <br>
+          <% 2.times do %>
+            <i class='fas fa-star'></i>
+          <% end %>
+          <%# <br><p>Petite explication</p> %>
+        <% elsif @artwork.score.between?(96, 114)#3étoiles %>
+          <%= @artwork.score %> <br>
+          <% 3.times do %>
+            <i class='fas fa-star'></i>
+          <% end %>
+          <%# <br><p>Petite explication</p> %>
+        <% elsif @artwork.score.between?(114, 132)#4étoiles %>
+          <%= @artwork.score %> <br>
+          <% 4.times do %>
+            <i class='fas fa-star'></i>
+          <% end %>
+          <%# <br><p>Petite explication</p> %>
+        <% elsif @artwork.score.between?(132, 150)#5étoiles %>
+          <%= @artwork.score %> <br>
+          <% 5.times do %>
+            <i class='fas fa-star'></i>
+          <% end %>
+          <%# <br><p>Petite explication</p> %>
+        <% else %>
+          NO RATE YET
+        <% end %>
+      <% else %>
+        NO RATE YET
+      <% end %></p>
     </ul>
   </div>
 
@@ -24,7 +57,7 @@
 
     <%= cl_image_tag @artwork.photo.key %><br>
 
-    <%= link_to "Redirect to marketplace", @artwork.marketplace_url, class: "btn-uniqueness", target: "_blank" %>
+    <%# <%= link_to "Redirect to marketplace", @artwork.marketplace_url, class: "btn-uniqueness", target: "_blank" %>
 
   </div>
 
@@ -36,10 +69,10 @@
       <%# <% end %>
     <%# <% end %>
 
-    <%= simple_form_for @artwork do |f| %>
-      <%= f.input :marketplace_url, input_html: { value: f.object.marketplace_url || "https://www." } %>
-      <%= f.submit %>
-    <% end %>
+    <%# <%= simple_form_for @artwork do |f| %>
+      <%# <%= f.input :marketplace_url, input_html: { value: f.object.marketplace_url || "https://www." } %>
+      <%# <%= f.submit %>
+    <%# <% end %>
 
 
     <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
