@@ -2,7 +2,11 @@ class ArtworksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @artworks = Artwork.all
+     if params[:query].present?
+      @artworks = Artwork.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @artworks = Artwork.all
+    end
   end
 
   def debug_score
@@ -14,6 +18,8 @@ class ArtworksController < ApplicationController
     @artwork_price = ArtworkPrice.new
   end
 
+
+
   def new
     @artwork = Artwork.new
   end
@@ -23,6 +29,7 @@ class ArtworksController < ApplicationController
     @artwork.user = current_user
 
     uploaded_file = UploadFileToApi.call(artwork_params[:photo])
+
     @artwork.color_tags_api_file_id = uploaded_file["file_id"]
 
     report = GetColorTags.call(@artwork.color_tags_api_file_id)
@@ -32,16 +39,24 @@ class ArtworksController < ApplicationController
     @artwork.width  = report["result"]["width"]
     @artwork.height = report["result"]["height"]
     @artwork.colors = report["result"]["colors"]
-    @artwork.save!
+    if @artwork.save
+      Artworks::ComputeScore.call(@artwork)
+      redirect_to artwork_path(@artwork)
+    else
+      render :new
+    end
+  end
 
-    Artworks::ComputeScore.call(@artwork)
-
+  def update
+    @artwork = Artwork.find(params[:id])
+    @artwork.update(artwork_params)
     redirect_to artwork_path(@artwork)
+
   end
 
   private
 
   def artwork_params
-    params.require(:artwork).permit(:name, :description, :photo)
+    params.require(:artwork).permit(:name, :description, :photo, :marketplace_url)
   end
 end

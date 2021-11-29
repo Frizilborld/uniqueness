@@ -1,3 +1,4 @@
+<% display_score = display_score || false %>
 <div class="card-product-index">
   <% if artwork.photo.attached? %>
   <%= cl_image_tag artwork.photo.key %>
@@ -6,10 +7,12 @@
   <div class="card-product-infos-index">
     <h2>
       <%= artwork.name %>
+
       <% if display_score %>
-        (<%= artwork.score %>)
+        |<%= artwork.score %>|
       <% end %>
     </h2>
     <p><%= artwork.description %></p>
+
   </div>
 </div>

@@ -1,0 +1,45 @@
+.form-control {
+  background: black;
+  border: 1px solid white;
+  color: white;
+
+  &:focus {
+    color: white;
+    background-color: black;
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+  }
+}
+
+#new_artwork {
+
+  label{
+    font-size: 20px;
+  }
+
+  .artwork_photo {
+    input {
+      background: black;
+      color:white;
+      border: none;
+    }
+  }
+}
+
+
+.search-form-control {
+
+  .fa-search {
+    color: white;
+  }
+
+  .form-control {
+    background: black;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    color: white;
+    font-size: 16px;
+  }
+}
