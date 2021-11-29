@@ -15,7 +15,7 @@
 
       <p>Score :
       <% if @artwork.score %>
-        <% if @artwork.score.between?(60, 78)#1étoiles %>
+        <% if @artwork.score.between?(0, 78)#1étoiles %>
           <%= @artwork.score %> <br>
           <i class='fas fa-star'></i>
           <%# <br><p>Petite explication</p> %>
@@ -37,7 +37,7 @@
             <i class='fas fa-star'></i>
           <% end %>
           <%# <br><p>Petite explication</p> %>
-        <% elsif @artwork.score.between?(132, 150)#5étoiles %>
+        <% elsif @artwork.score.between?(132, 250)#5étoiles %>
           <%= @artwork.score %> <br>
           <% 5.times do %>
             <i class='fas fa-star'></i>
