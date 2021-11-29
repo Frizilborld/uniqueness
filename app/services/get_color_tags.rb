@@ -20,7 +20,7 @@ class GetColorTags
       "process": "color-classification"
     }
 
-    body = <<~JSON
+    payload = <<~JSON
       {
         "report_number":21,
         "created":"2021-11-23T16:55:11.927968+01:00",
@@ -38,10 +38,11 @@ class GetColorTags
         }
       }
     JSON
+    body = JSON.parse(payload)
 
     # TODO: UNCOMMENT WHEN WE ARE READY TO USE THE API
-     response = HTTP.headers(headers).post(url, json: params)
-     body     = response.parse
+    response = HTTP.headers(headers).post(url, json: params)
+    body     = response.parse
     return body
   end
 end
