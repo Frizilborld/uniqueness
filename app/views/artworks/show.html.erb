@@ -24,7 +24,7 @@
 
     <%= cl_image_tag @artwork.photo.key %><br>
 
-    <%= link_to "Redirect to marketplace", "https://superrare.com/sign-in", class: "btn-uniqueness", target: "_blank" %>
+    <%= link_to "Redirect to marketplace", @artwork.marketplace_url, class: "btn-uniqueness", target: "_blank" %>
 
   </div>
 

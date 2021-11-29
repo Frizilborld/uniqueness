@@ -18,6 +18,8 @@ class ArtworksController < ApplicationController
     @artwork_price = ArtworkPrice.new
   end
 
+
+
   def new
     @artwork = Artwork.new
   end
@@ -41,8 +43,13 @@ class ArtworksController < ApplicationController
     Artworks::ComputeScore.call(@artwork)
 
     redirect_to artwork_path(@artwork)
+
   end
 
+  def update
+
+  end
+  
   private
 
   def artwork_params
