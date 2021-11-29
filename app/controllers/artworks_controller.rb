@@ -2,8 +2,8 @@ class ArtworksController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-     if params[:query].present?
-      @artworks = Artwork.where("name ILIKE ?", "%#{params[:query]}%")
+    if params[:query].present?
+      @artworks = Artwork.joins(:user).where('artworks.name ILIKE :query OR users.name ILIKE :query', query: "%#{params[:query]}%" )
     else
       @artworks = Artwork.all
     end
