@@ -11,16 +11,16 @@
   </div>
   <div class="home-container">
     <div class="half-home-3">
-      <%= image_tag('the-wall-part2.jpg') %>
+      <%= cl_image_tag @artworks[0].photo.key %>
     </div>
     <div class="half-home-4">
 
-      <h2><span class="color-blue">Raphael Lacoste</span></h2>
+      <h2><span class="color-blue"><%= @artist_of_the_month.name %></span></h2>
       <h3><span class="color-orange">3 </span>Pieces</h3>
-      
+
       <div class="w-100">
-        <%= image_tag('Ancient_World_Rlacoste.jpg', class: "mb-4") %>
-        <%= image_tag('smoke-on-the-rooftop.jpg') %>
+        <%= cl_image_tag @artworks[1].photo.key %>
+        <%= cl_image_tag @artworks[2].photo.key %>
       </div>
     </div>
   </div>

@@ -29,6 +29,7 @@ class ArtworksController < ApplicationController
     @artwork.user = current_user
 
     uploaded_file = UploadFileToApi.call(artwork_params[:photo])
+
     @artwork.color_tags_api_file_id = uploaded_file["file_id"]
 
     report = GetColorTags.call(@artwork.color_tags_api_file_id)
@@ -38,18 +39,19 @@ class ArtworksController < ApplicationController
     @artwork.width  = report["result"]["width"]
     @artwork.height = report["result"]["height"]
     @artwork.colors = report["result"]["colors"]
-    @artwork.save!
-
-    Artworks::ComputeScore.call(@artwork)
-
-    redirect_to artwork_path(@artwork)
-
+    if @artwork.save
+      Artworks::ComputeScore.call(@artwork)
+      redirect_to artwork_path(@artwork)
+    else
+      render :new
+    end
   end
 
   def update
     @artwork = Artwork.find(params[:id])
     @artwork.update(artwork_params)
     redirect_to artwork_path(@artwork)
+
   end
 
   private

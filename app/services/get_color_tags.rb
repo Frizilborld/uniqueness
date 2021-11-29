@@ -42,7 +42,6 @@ class GetColorTags
     # TODO: UNCOMMENT WHEN WE ARE READY TO USE THE API
      response = HTTP.headers(headers).post(url, json: params)
      body     = response.parse
-
     return body
   end
 end
