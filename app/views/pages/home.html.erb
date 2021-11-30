@@ -11,14 +11,19 @@
        <% end %>
     </div>
   </div>
+  <br>
+<br>
+<br>
+<br>
+<br>
   <div class="month-title">
     <h1>Uniqueness artist of the month</h1>
   </div>
   <div class="home-container-2">
     <div class="half-home-3">
-    <%= link_to artwork_path(@artworks[0]) do %>
-      <%= cl_image_tag @artworks[0].photo.key %>
-    <% end %>
+      <%= link_to artwork_path(@artworks[0]) do %>
+        <%= cl_image_tag @artworks[0].photo.key %>
+      <% end %>
 
     </div>
     <div class="half-home-4">
@@ -44,11 +49,15 @@
   </div> %>
   <%= render 'shared/burger_menu' %>
 </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="center" style="width: 80vw; margin: 0 auto;">
   <div class="carousel-cell">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
-    <div class="news">Du texte</div>
   </div>
   <div class="carousel-cell">
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" alt="One World Trade" />
@@ -69,32 +78,3 @@
     <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" alt="flight formation" />
   </div>
 </div>
-
-<%# <script>
-$('.center').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    dots: true,
-    responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-  {
-    breakpoint: 480,
-    settings: {
-      arrows: false,
-      centerMode: true,
-      centerPadding: '40px',
-      slidesToShow: 1
-      }
-    }
-  ]
-});
-</script> %>

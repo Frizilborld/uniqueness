@@ -3,13 +3,15 @@
 
     <%= cl_image_tag @artwork.photo.key %><br>
     <%# <%= link_to "Redirect to marketplace", @artwork.marketplace_url, class: "btn-uniqueness", target: "_blank" %>
+    <%= link_to artworks_path query: @artwork.user.name do %>
     <br><p id="artist_signature"><%= @artwork.user.name %></p>
+    <% end %>
 
   </div>
   <div class="card-show-info">
     <ul>
       <div class="card-product-infos-show">
-        <span class="border-bottom row mx-0 w-100 border-bottom-white"><h2 id="art_name"><%= @artwork.name %></h2></span>
+        <span class="row mx-0 w-100"><h2 id="art_name"><%= @artwork.name %></h2></span>
         <p id="description_art"><%= @artwork.description %></p>
         <br>
         <br>
@@ -22,13 +24,13 @@
       <p>Score :
       <% if @artwork.score %>
         <% if @artwork.score.between?(0, 78)#1étoiles %>
-          <%= @artwork.score %> <i class="bi bi-question-circle-fill"></i><br>
+          <%= @artwork.score %> <br>
           <i class='fas fa-star'></i>
           <% 4.times do %>
             <i class="far fa-star"></i>
           <% end %>
         <% elsif @artwork.score.between?(78, 96)#2étoiles %>
-          <%= @artwork.score %> <i class="bi bi-question-circle-fill"></i><br>
+          <%= @artwork.score %> <br>
           <% 2.times do %>
             <i class='fas fa-star'></i>
           <% end %>
@@ -36,7 +38,7 @@
             <i class="far fa-star"></i>
           <% end %>
         <% elsif @artwork.score.between?(96, 114)#3étoiles %>
-          <%= @artwork.score %> <i class="bi bi-question-circle-fill"></i><br>
+          <%= @artwork.score %> <br>
           <% 3.times do %>
             <i class='fas fa-star'></i>
           <% end %>
@@ -44,7 +46,7 @@
             <i class="far fa-star"></i>
           <% end %>
         <% elsif @artwork.score.between?(114, 132)#4étoiles %>
-          <%= @artwork.score %> <i class="bi bi-question-circle-fill"></i><br>
+          <%= @artwork.score %><br>
           <% 4.times do %>
             <i class='fas fa-star'></i>
           <% end %>
@@ -52,7 +54,7 @@
             <i class="far fa-star"></i>
           <% end %>
         <% elsif @artwork.score.between?(132, 150)#5étoiles %>
-          <%= @artwork.score %> <i class="bi bi-question-circle-fill"></i><br>
+          <%= @artwork.score %> <br>
           <% 5.times do %>
             <i class='fas fa-star'></i>
           <% end %>
@@ -68,13 +70,6 @@
         NO RATE YET
       <% end %> </p>
 
-      <div>
-        <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-          <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
-          <% else %>
-          <div class="btn-uniqueness-upvote upvoted">You already upvoted</div>
-        <% end %>
-      </div>
         <p>Upvotes: <%= @artwork.upvotes.count %></p>
     <br>
     <br>
@@ -82,11 +77,14 @@
     <br>
     <br>
     <br>
-  <div class="bouton_upvote">
-    <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-      <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
-    <% end %>
-  </div>
+    <br>
+      <div>
+        <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
+          <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
+         <% else %>
+          <div class="btn-uniqueness-upvote upvoted">You already upvoted</div>
+        <% end %>
+      </div>
     </ul>
   </div>
 
@@ -106,5 +104,4 @@
     <%# <% end %>
 
 </div>
-
 <%= render 'shared/burger_menu' %>
