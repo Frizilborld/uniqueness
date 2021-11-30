@@ -103,7 +103,13 @@
     border: 1px solid transparent;
     transition: all 0.3s ease-in-out;
     height: 30px;
-        margin-top: 37px;
+    margin-top: 50px;
+    width: 100px;
+    &:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+  }
 }
 
 .btn-burger {
