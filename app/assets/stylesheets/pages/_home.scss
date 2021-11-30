@@ -6,6 +6,15 @@
   margin: 0 auto 5vh auto;
 }
 
+.home-container-2 {
+  display: flex;
+  justify-content: space-between;
+  height: 75vh;
+  color: whitesmoke;
+  margin: 0 auto 5vh auto;
+  height: 70vh;
+}
+
 .half-home-1 {
   width: 46%;
   height: 100%;
@@ -70,6 +79,8 @@
     width: 35vw;
     height: 25vh;
     object-fit: cover;
+    padding: 10px;
+    margin: -2px;
   }
   h2{
     font-family: $headers-font;
@@ -131,4 +142,13 @@
   padding-top: 600px;
   z-index: 100;
   vertical-align: middle;
+h1 {
+  color:cadetblue;
+  font-size: 50px;
+}
+
+.month-title {
+  display: flex;
+  justify-content: center;
+      padding-bottom: 50px;
 }
