@@ -102,3 +102,33 @@
     color: darkgray;
   }
 }
+
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  height: 3px;
+  display: block;
+}
+.progress-bar {
+  background-color: white;
+  width: 0%;
+  display: block;
+  height: inherit;
+}
+
+#loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0.3;
+  background-color: #fff;
+  z-index: 99;
+}
+
+#loading-image {
+  padding-top: 600px;
+  z-index: 100;
+  vertical-align: middle;
+}

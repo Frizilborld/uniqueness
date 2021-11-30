@@ -8,7 +8,6 @@
   font-family: $headers-font;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
   border-radius: 2px;
-
 }
 
 .card-product-show img {
@@ -58,19 +57,18 @@
 }
 
 .card-show-info {
-display: flex;
-background-color: black;
-height: 360px;
-width: 340px;
-margin-top: 30px;
-margin-bottom: 35px;
-justify-content: left;
-font-family: $headers-font;
-font-size: 25px;
-
+  display: flex;
+  background-color: black;
+  height: 360px;
+  width: 340px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  justify-content: left;
+  font-family: $headers-font;
+  font-size: 25px;
 }
-//en dessous cest le bouton redirect to
 
+//en dessous cest le bouton redirect to
 .btn-flat {
   color: black;
   padding: 8px 24px;
@@ -89,16 +87,20 @@ font-size: 25px;
 }
 
 .btn-uniqueness-show {
-    background-color: white;
-    color: black;
-    padding: 12px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid transparent;
-    transition: all 0.3s ease-in-out;
-    height: 30px;
+  background-color: white;
+  color: black;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+  height: 30px;
+}
+
+.upvoted {
+  opacity: 0.5;
 }
