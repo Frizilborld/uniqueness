@@ -142,7 +142,6 @@
   padding-top: 600px;
   z-index: 100;
   vertical-align: middle;
-
 }
 
 .month-title {
@@ -150,7 +149,19 @@
   justify-content: center;
   padding-bottom: 50px;
   h1 {
-  color:cadetblue;
-  font-size: 50px;
+    color:cadetblue;
+    font-size: 50px;
+  }
 }
+
+.typed-js {
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+h3 {
+  color: white;
 }

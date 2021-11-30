@@ -25,6 +25,13 @@ jean_potin = User.create!(name: "Jean Potin", email: 'Jeanpotin@hotmail.com', pa
 viktor_krazolopotisch = User.create!(name: "Viktor Krazolopotisch", email: 'Viktorkrazolopotisch@hotmail.com', password: '123456')
 felix_norman = User.create!(name: "Felix Norman", email: 'Felixnorman@hotmail.com', password: '123456')
 léa_hart = User.create!(name: "Léa Hart", email: 'Léahart@hotmail.com', password: '123456')
+miss_alsimpson = User.create!(name: "Miss Al Simpson", email: 'missalsimpson@hotmail.com', password: '123456')
+jacob_riglin = User.create!(name: "Jacob Riglin", email: 'jacobriglin@hotmail.com', password: '123456')
+julia_ponsford = User.create!(name: "Julia K. Ponsford", email: 'juliaponsford@hotmail.com', password: '123456')
+anthony_azewkoh = User.create!(name: "Anthony Azewkoh", email: 'anthonyazewkoh@hotmail.com', password: '123456')
+pajaritaflora = User.create!(name: "Pajaritaflora", email: 'pajaritaflora@hotmail.com', password: '123456')
+raphaellacoste = User.create!(name: "Raphael Lacoste", email: 'raphaellacoste@hotmail.com', password: '123456')
+
 
 
 # IMAGES RECONNUES EN text/html A CORRIGER !!!
@@ -320,114 +327,155 @@ image20.upvotes.new(user_id: User.all.sample.id)
 image20.upvotes.new(user_id: User.all.sample.id)
 image20.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/-gLAlYetq2w7chjVKzeGRBXnNhEVPyorA7uVZjNoY0yRCFgulTZcnS1kShn6Mp8iPBP0tCmX_OdsyKbJIZsumDUxceJcHoH0J2gvcg=w1400-k')
-# image21 = Artwork.new(name: "Bored Ape Kennel Club #1",25', description: '1262x1262', user_id: nico)
-# image21.photo.attach(io: file, filename: 'BAKC#1.jpg', content_type: 'image/png')
-# image21.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmSVLJ9YBUN3v4waqKjqsGZjPdxDEcNUmADC4JM7Yc4idE/old-money-corrupts-blue-eyes-.png')
+image21 = Artwork.new(name: "Old Money", description: 'And you forget that Old Money Corrupts the bluest of eyes...', user_id: miss_alsimpson.id,
+   score: 113
+)
+image21.photo.attach(io: file, filename: 'Old Money.png', content_type: 'image/png')
+image21.upvotes.new(user_id: User.all.sample.id)
+image21.upvotes.new(user_id: User.all.sample.id)
+image21.upvotes.new(user_id: User.all.sample.id)
+image21.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/763ffaddbd3368edb78c5f939f20f0e3c69e0a7e8265de19c2eedb6f2ab1d7c1')
-# image22 = Artwork.new(name: "Bored Ape Kennel Club #2", artist: '22', description: '1262x1262', user_id: rayane)
-# image22.photo.attach(io: file, filename: 'BAKC#2.jpg', content_type: 'image/png')
-# image22.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/4w5TMxhGAMG9uMSHIRmAkL4fz3PHBg29mKp_rQdyel_ok12dTvZMSo35NhNjWHOssKOR4y2TWa6vCphqqgCCEdMBMZmUN6K4FMZhTA=w1400-k')
-# image23 = Artwork.new(name: "Bored Ape Kennel Club #3", artist: '27', description: '1262x1262', user_id: rayane)
-# image23.photo.attach(io: file, filename: 'BAKC#3.jpg', content_type: 'image/png')
-# image23.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmezvnjVZ7nk8d7L2Bd3BZEGc8qPGpdyBJBGFkgdkj96Pm/WEB3.png')
+image22 = Artwork.new(name: "WEB 3", description: 'No more censorship. No more gatekeepers. No more permissions.', user_id: miss_alsimpson.id,
+   score: 104
+)
+image22.photo.attach(io: file, filename: 'WEB3.png', content_type: 'image/png')
+image22.upvotes.new(user_id: User.all.sample.id)
+image22.upvotes.new(user_id: User.all.sample.id)
+image22.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/v5n1tq0F07__0XcOG8TSxKx1BR8XgwreYRqLe1gBnUh7l7tuNLFX88PBQuH6PuvB_i-jJECNRzi4v-8J7e7-p5C3QftvAmM9SlJ7=w1400-k')
-# image24 = Artwork.new(name: "Bored Ape Kennel Club #4", artist: '20', description: '1262x1262', user_id: thomas)
-# image24.photo.attach(io: file, filename: 'BAKC#4.jpg', content_type: 'image/png')
-# image24.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/fba2cceb80ffa7d61aac2852152247914ceab3431ebb3c1c097cad64449c980d')
-# image25 = Artwork.new(name: "Bored Ape Kennel Club #5", artist: '26', description: '1262x1262', user_id: thomas)
-# image25.photo.attach(io: file, filename: 'BAKC#5.jpg', content_type: 'image/png')
-# image25.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmbjaWyEsrJs76znrmKH3exgS3bYL3EWc5EjnmzcUWydum/BuildingBlocks.jpg')
+image27 = Artwork.new(name: "BUILDING BLOCKS", description: 'Perspectives rarely seen by the human eye. ', user_id: jacob_riglin.id,
+   score: 129
+)
+image27.photo.attach(io: file, filename: 'BUILDING BLOCKS.jpg', content_type: 'image/jpg')
+image27.upvotes.new(user_id: User.all.sample.id)
+image27.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/86aea1c16edc94c2b100a886fdee14f53a9101e4b134b88bd87df7725c405887')
-# image26 = Artwork.new(name: "Bored Ape Kennel Club #6", artist: '28', description: '1262x1262', user_id: thomas)
-# image26.photo.attach(io: file, filename: 'BAKC#6.jpg', content_type: 'image/png')
-# image26.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/ae7a3203245dc42a625b5893c8df89a993e40263cad0d49204e943873a6bd9b9')
-# image27 = Artwork.new(name: "Bored Ape Kennel Club #7", artist: '22', description: '1262x1262', user_id: max)
-# image27.photo.attach(io: file, filename: 'BAKC#7.jpg', content_type: 'image/png')
-# image27.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmPoHP1ba8aKLN1jtuJztibYXDUmhRUttjEbRuXxKrDoW1/petal_me.png')
+image28 = Artwork.new(name: "PETAL ME", description: 'A self-portrait alien collage.', user_id: julia_ponsford.id,
+   score: 109
+)
+image28.photo.attach(io: file, filename: 'PETAL ME.jpg', content_type: 'image/jpg')
+image28.upvotes.new(user_id: User.all.sample.id)
+image28.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/8d0205c3bc1f11b6adb8c0130039892bad82a6e53d628b02bf66ecdde7f17573')
-# image28 = Artwork.new(name: "Bored Ape Kennel Club #8", artist: '23', description: '1262x1262', user_id: max)
-# image28.photo.attach(io: file, filename: 'BAKC#8.jpg', content_type: 'image/png')
-# image28.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/e92558ae50d490ed6e1c94ecf4ac1eec2f71efae93becbecf66713b3d55c36df')
-# image29 = Artwork.new(name: "Bored Ape Kennel Club #9", artist: '24', description: '1262x1262', user_id: nico)
-# image29.photo.attach(io: file, filename: 'BAKC#9.jpg', content_type: 'image/png')
-# image29.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmULVP9JWyiNAKLzjij3W7WrVoosf8uAeQ6eec8fBrbPoW')
+image29 = Artwork.new(name: "Strawberry Dreams", description: 'A digital collage.', user_id: julia_ponsford.id,
+   score: 112
+)
+image29.photo.attach(io: file, filename: 'Strawberry Dreams.jpg', content_type: 'image/jpg')
+image29.upvotes.new(user_id: User.all.sample.id)
+image29.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/a46f8dab5ed4f22b23319c723a8f5806a8c46495037549b7a58c44153fc3bc52')
-# image30 = Artwork.new(name: "Bored Ape Kennel Club #10", artist: '25', description: '1262x1262', user_id: nico)
-# image30.photo.attach(io: file, filename: 'BAKC#10.jpg', content_type: 'image/png')
-# image30.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/rLvgYgTx5K0uDIyg0bMQX-tEdCjERpXo8gcuOX1vJRT8KPRwFhpAPYgmecCHcbUuXn1p7P47fkAfjqI6zJ4VAgb0szVNxtsJuiI_WQ=w1400-k')
-# image31 = Artwork.new(name: "CrypToadz #1", artist: '25', description: '1400x1400', user_id: rayane)
-# image31.photo.attach(io: file, filename: 'CToadz#1.jpg', content_type: 'image/png')
-# image31.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmQrgZA4SYoTL5CQX8Rzca4maQRvYUMwSrc9cQz2dDmZxr')
+image30 = Artwork.new(name: "Garden anarchy", description: 'When the garden glitches out and anarchy rules!', user_id: julia_ponsford.id,
+   score: 107
+)
+image30.photo.attach(io: file, filename: 'LAnarchie du Jardin.jpg', content_type: 'image/jpg')
+image30.upvotes.new(user_id: User.all.sample.id)
+image30.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/1AMIovZi9nH2gUNW8Y8adoqdhdtP7prR5g6nJadaf_W8N-BXXbb5Fq8d-evYEGTYYa-SQCzncthRslpb3JyKwPa2UmoWrwLXlygIlB8=w1400-k')
-# image32 = Artwork.new(name: "CrypToadz #2", artist: '12', description: '1400x1400', user_id: thomas)
-# image32.photo.attach(io: file, filename: 'CToadz#2.jpg', content_type: 'image/png')
-# image32.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/v_ICbid3z8ZsSHX61rhcgnWG5F3xWeARsf0Bg0nWEQ0kL9tWqqqhT7Q3cK6ZJG0fiSsRlcZLKrZ8tm-kMNcaXaU0D8BDxcCGpM3T=w1400-k')
-# image33 = Artwork.new(name: "CrypToadz #3", artist: '15', description: '1400x1400', user_id: rayane)
-# image33.photo.attach(io: file, filename: 'CToadz#3.jpg', content_type: 'image/png')
-# image33.save!
+file = URI.open('https://ipfs.pixura.io/ipfs/QmUXJx9jZGCxvUpUewn1A7uC9c2jxDv9W6kh5KswWRqjF1')
+image31 = Artwork.new(name: "Awakening", description: 'The cells awaken and reach for the sky.', user_id: julia_ponsford.id,
+   score: 122
+)
+image31.photo.attach(io: file, filename: 'Awakening.jpg', content_type: 'image/jpg')
+image31.upvotes.new(user_id: User.all.sample.id)
+image31.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/UrLF4YhuaUIGfCrHa4yWzSvf3w_J-JbzgaG1XmDOYHIVBhXgSjGfdevrCazcB-yI_GGNZyBWvkCMa223ThQp1-E1lldT3NE16vwAFw=w1400-k')
-# image34 = Artwork.new(name: "CrypToadz #4", artist: '18', description: '1400x1400', user_id: nico)
-# image34.photo.attach(io: file, filename: 'CToadz#4.jpg', content_type: 'image/png')
-# image34.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/2WzlPZhmzcaOCNMcBUE9Sq5jBZr5mE1MkBocIwXXloLAw1cSHa-vzcNK9LQ0mo9yONzXE-UTyfeseMI04ad1J_D4jtDLdOdW9O9b=w1400-k')
-# image35 = Artwork.new(name: "CrypToadz #5", artist: '11', description: '1400x1400', user_id: max)
-# image35.photo.attach(io: file, filename: 'CToadz#5.jpg', content_type: 'image/png')
-# image35.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/lMzK_L6juA3ch6J07sZfEEpsBzWYDRHoyyu0K_wXfHdp_-WmoQLq1Uie1rzvtbhaBVJnt2sXavVOosOjOihI5quNU2SKyWCrIrN0ZQ=w1400-k')
-# image36 = Artwork.new(name: "CrypToadz #6", artist: '12', description: '1400x1400', user_id: max)
-# image36.photo.attach(io: file, filename: 'CToadz#6.jpg', content_type: 'image/png')
-# image36.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/9qPkDx0-no3uw-Gg2CKPFLT_e2DDn7GbERHWdhFhzpeVmHkvlsDkC_DkWbFgpXY89xz7isCub9tPsNfiQru47YhexS-vs-oxs8tlUw=w1400-k')
-# image37 = Artwork.new(name: "CrypToadz #7", artist: '25', description: '1400x1400', user: nico)
-# image37.photo.attach(io: file, filename: 'CToadz#7.jpg', content_type: 'image/png')
-# image37.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/c8dYKhcxYZxS1HPKweb1aEFe64hvlj7JtXkNDUmpaF6GzXOxjdS65PW8uwzyjG4Tp1V3Tp0gTGklGtS68OBtXYUjudestm_gGixV=w1400-k')
-# image38 = Artwork.new(name: "CrypToadz #8", artist: '14', description: '1400x1400', user: rayane)
-# image38.photo.attach(io: file, filename: 'CToadz#8.jpg', content_type: 'image/png')
-# image38.save!
 
-# file = URI.open('https://lh3.googleusercontent.com/-jBkwFUj8klxwbBPBTJUVSrEnXV5U92Ij-0JXILzCr-L0sZIZheMT7l8APko5g-3zL4Q73ZzrdmwDT4vTuQBAOPTqxDzMXXNkC5zBJI=w1400-k')
-# image39 = Artwork.new(name: "CrypToadz #9", artist: '12', description: '1400x1400', user: nico)
-# image39.photo.attach(io: file, filename: 'CToadz#9.jpg', content_type: 'image/png')
-# image39.save!
 
-# file = URI.open('https://static.nftgo.io/asset/metadata/image/179f9a20e149f59aabea72eaf8b4396527d34d90dd820e133a7cedb2fc93f26a')
-# image40 = Artwork.new(name: "CrypToadz #10", artist: '20', description: '1400x1400', user: thomas)
-# image40.photo.attach(io: file, filename: 'CToadz#10.jpg', content_type: 'image/png')
-# image40.save!
 
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, Artwork: image)
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image1)
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image)
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2)
 
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: rayane, item: image, status: 3)
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: nico, item: image2, status: 3)
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: max, item: image, status: 4)
-# Booking.create!(begin_date: Date.today, end_date: Date.today + 1, user: thomas, item: image2, status: 4)
+file = URI.open('https://ipfs.pixura.io/ipfs/QmTDvMkZoxvJYCqSoKfAwWuEY6UcihNec9WPusRFFq6zME/the-last-prophet.jpg')
+image32 = Artwork.new(name: "The Last Prophet", description: 'Have you wondered, perhaps, why the prophets dont walk the land anymore?', user_id: anthony_azewkoh.id,
+   score: 113
+)
+image32.photo.attach(io: file, filename: 'The Last Prophet.jpg', content_type: 'image/jpg')
+image32.upvotes.new(user_id: User.all.sample.id)
+image32.save!
+
+file = URI.open('https://ipfs.pixura.io/ipfs/QmPfTKvTWvgGvUmVJ1K7x9KNyNmkA2bjpohTtRzoKATcwE/TheIndigoMan.jpg')
+image33 = Artwork.new(name: "The Indigo Man", description: 'One thing is certain: once you see him, you will never forget him.', user_id: anthony_azewkoh.id,
+   score: 118
+)
+image33.photo.attach(io: file, filename: 'The Indigo Man.jpg', content_type: 'image/jpg')
+image33.upvotes.new(user_id: User.all.sample.id)
+image33.save!
+
+file = URI.open('https://ipfs.pixura.io/ipfs/QmXCnopCavr5p9FmpTcZ4VcpMuVMq6Ny9owoWUUNnExdkx/TheVioletDaughter.jpg')
+image34 = Artwork.new(name: "The Violet Daughter", description: 'The Violet Daughter, the last of The Deathless, the last on the spectrum.', user_id: anthony_azewkoh.id,
+   score: 120
+)
+image34.photo.attach(io: file, filename: 'The Violet Daughter.jpg', content_type: 'image/jpg')
+image34.upvotes.new(user_id: User.all.sample.id)
+image34.save!
+
+file = URI.open('https://ipfs.pixura.io/ipfs/QmQRB7VYL5hrP9TgqycMbGDPZPb2hydozvLTVbwpjG58EG/TheRedMan.jpg')
+image35 = Artwork.new(name: "The Red Man", description: 'Something about old age.', user_id: anthony_azewkoh.id,
+   score: 121
+)
+image35.photo.attach(io: file, filename: 'The Red Man.jpg', content_type: 'image/jpg')
+image35.upvotes.new(user_id: User.all.sample.id)
+image35.save!
+
+
+
+
+
+
+file = URI.open('https://ipfs.pixura.io/ipfs/QmYbb912dYjXAuoT6mfdYixmLNp7Za2navBjxKvAYs6iQr/Gems-in-Blue-2000x2000.png')
+image36 = Artwork.new(name: "Gems in Blue", description: 'On the water s edge.', user_id: pajaritaflora.id,
+   score: 129
+)
+image36.photo.attach(io: file, filename: 'Gems in Blue.png', content_type: 'image/png')
+image36.upvotes.new(user_id: User.all.sample.id)
+image36.save!
+
+file = URI.open('https://cdna.artstation.com/p/assets/images/images/031/602/424/large/raphael-lacoste-bg-game-raph.jpg?1604078123')
+image37 = Artwork.new(name: "Northern Lights", description: 'AC Valhalla', user_id: raphaellacoste.id,
+   score: 133
+)
+image37.photo.attach(io: file, filename: 'Northern Lights.png', content_type: 'image/png')
+image37.upvotes.new(user_id: User.all.sample.id)
+image37.save!
+
+file = URI.open('https://cdna.artstation.com/p/assets/images/images/031/599/668/large/raphael-lacoste-conf-ack-env-floe-rlacoste.jpg?1604071893')
+image38 = Artwork.new(name: "Floe", description: 'AC Valhalla', user_id: raphaellacoste.id,
+   score: 128
+)
+image38.photo.attach(io: file, filename: 'Floe.png', content_type: 'image/png')
+image38.upvotes.new(user_id: User.all.sample.id)
+image38.save!
+
+file = URI.open('https://cdnb.artstation.com/p/assets/images/images/023/833/191/large/raphael-lacoste-boat-web.jpg?1580478358')
+image39 = Artwork.new(name: "Arrival", description: 'Early morning', user_id: raphaellacoste.id,
+   score: 129
+)
+image39.photo.attach(io: file, filename: 'Arrival.png', content_type: 'image/png')
+image39.upvotes.new(user_id: User.all.sample.id)
+image39.save!
+
+file = URI.open('https://cdnb.artstation.com/p/assets/images/images/007/883/739/large/raphael-lacoste-ace-ca-env-temple2-raphael.jpg?1509128041')
+image40 = Artwork.new(name: "The journey", description: 'Entrance to the temple', user_id: raphaellacoste.id,
+   score: 145
+)
+image40.photo.attach(io: file, filename: 'The journey.png', content_type: 'image/png')
+image40.upvotes.new(user_id: User.all.sample.id)
+image40.save!
+
 
 puts 'Seed Created'
