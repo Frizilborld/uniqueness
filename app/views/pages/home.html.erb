@@ -11,7 +11,10 @@
        <% end %>
     </div>
   </div>
-  <div class="home-container">
+  <div class="month-title">
+    <h1>Uniqueness artist of the month</h1>
+  </div>
+  <div class="home-container-2">
     <div class="half-home-3">
     <%= link_to artwork_path(@artworks[0]) do %>
       <%= cl_image_tag @artworks[0].photo.key %>
