@@ -3,7 +3,9 @@
 
     <%= cl_image_tag @artwork.photo.key %><br>
     <%# <%= link_to "Redirect to marketplace", @artwork.marketplace_url, class: "btn-uniqueness", target: "_blank" %>
+    <%= link_to artworks_path query: @artwork.user.name do %>
     <br><p id="artist_signature"><%= @artwork.user.name %></p>
+    <% end %>
 
   </div>
   <div class="card-show-info">
