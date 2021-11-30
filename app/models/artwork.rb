@@ -6,5 +6,6 @@ class Artwork < ApplicationRecord
 
   validates :name, presence: true
   validates :description, presence: true
+  validates :photo, presence: true
   # validates :marketplace_url, presence: true
 end

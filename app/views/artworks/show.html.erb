@@ -79,11 +79,10 @@
       <div>
         <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
           <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
-          <% else %>
+         <% else %>
           <div class="btn-uniqueness-upvote upvoted">You already upvoted</div>
         <% end %>
       </div>
-
     </ul>
   </div>
 
