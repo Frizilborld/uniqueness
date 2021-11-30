@@ -17,6 +17,10 @@ require('jquery')
 // const imagePath = (name) => images(name, true)
 import "controllers";
 import "bootstrap";
+import { scrollProgressBar } from '../plugins/scrollProgressBar'
+import { showLoading } from '../plugins/loader'
 
 document.addEventListener('turbolinks:load', () => {
+  scrollProgressBar();
+  showLoading();
 });
