@@ -68,13 +68,6 @@
         NO RATE YET
       <% end %> </p>
 
-      <div>
-        <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-          <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
-          <% else %>
-          <div class="btn-uniqueness-upvote upvoted">You already upvoted</div>
-        <% end %>
-      </div>
         <p>Upvotes: <%= @artwork.upvotes.count %></p>
     <br>
     <br>
@@ -85,6 +78,8 @@
   <div class="bouton_upvote">
     <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
       <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
+                <% else %>
+          <div class="btn-uniqueness-upvote upvoted">You already upvoted</div>
     <% end %>
   </div>
     </ul>
