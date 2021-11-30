@@ -1,20 +1,18 @@
 .card-product-show {
   display: block;
-  flex-wrap: wrap;
   background-color: black;
   background-size: cover;
   margin-top: 30px;
   margin-bottom: 35px;
   font-family: $headers-font;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
-  border-radius: 2px;
-
 }
 
 .card-product-show img {
-  height: 630px;
-  width: 471px;
-  object-fit: cover;
+  height: 530px;
+  width: 990px;
+  margin-left: 60px;
+  object-fit: contain;
+  justify-items: center;
 }
 
 .card-product-show h2 {
@@ -25,6 +23,25 @@
   color:whitesmoke;
 }
 
+#artist_signature {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+#description_art {
+ color: gray;
+ font-size: 22px;
+ font-style: italic;
+}
+ #art_name {
+   padding-left: 0%;
+ }
+
+.bi-question-circle-fill {
+  color: white;
+}
+
 .card-product-show p {
   font-size: 14px;
   line-height: 1.4;
@@ -33,6 +50,7 @@
   margin-top: 8px;
   text-align: left;
   color: #404E5C;
+
 }
 
 .card-product-show .card-product-infos-show {
@@ -47,7 +65,7 @@
 
 .cards-container-show {
   display: flex;
-  box-sizing: border-box;
+  box-sizing:content-box;
   width: 100%;
   justify-content: space-around;
   float: right;
@@ -61,13 +79,13 @@
 display: flex;
 background-color: black;
 height: 360px;
+border: white;
 width: 340px;
 margin-top: 30px;
 margin-bottom: 35px;
 justify-content: left;
 font-family: $headers-font;
-font-size: 25px;
-
+font-size: 18px;
 }
 //en dessous cest le bouton redirect to
 
