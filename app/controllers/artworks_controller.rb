@@ -28,17 +28,16 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.new(artwork_params)
     @artwork.user = current_user
 
-    uploaded_file = UploadFileToApi.call(artwork_params[:photo])
+    if artwork_params[:photo].present?
+      uploaded_file = UploadFileToApi.call(artwork_params[:photo])
+      @artwork.color_tags_api_file_id = uploaded_file["file_id"]
+      report = GetColorTags.call(@artwork.color_tags_api_file_id)
+      @artwork.number_of_pixel_in_image = report["result"]["number_of_pixel_in_image"]
+      @artwork.width  = report["result"]["width"]
+      @artwork.height = report["result"]["height"]
+      @artwork.colors = report["result"]["colors"]
+    end
 
-    @artwork.color_tags_api_file_id = uploaded_file["file_id"]
-
-    report = GetColorTags.call(@artwork.color_tags_api_file_id)
-
-
-    @artwork.number_of_pixel_in_image = report["result"]["number_of_pixel_in_image"]
-    @artwork.width  = report["result"]["width"]
-    @artwork.height = report["result"]["height"]
-    @artwork.colors = report["result"]["colors"]
     if @artwork.save
       Artworks::ComputeScore.call(@artwork)
       redirect_to artwork_path(@artwork)
