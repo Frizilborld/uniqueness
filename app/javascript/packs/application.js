@@ -19,8 +19,10 @@ import "controllers";
 import "bootstrap";
 import { scrollProgressBar } from '../plugins/scrollProgressBar'
 import { showLoading } from '../plugins/loader'
+import { initTyped } from '../plugins/init_typed';
 
 document.addEventListener('turbolinks:load', () => {
   scrollProgressBar();
   showLoading();
+  initTyped();
 });
