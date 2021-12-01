@@ -122,9 +122,11 @@
 }
 .progress-bar {
   background-color: white;
-  width: 0%;
   display: block;
-  height: inherit;
+  height: 5px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
 }
 
 #loading {
@@ -149,8 +151,10 @@
   justify-content: center;
   padding-bottom: 50px;
   h1 {
-    color:cadetblue;
-    font-size: 50px;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: $headers-font;
   }
 }
 
@@ -160,8 +164,4 @@
   margin: auto;
   margin-top: 50px;
   margin-bottom: 100px;
-}
-
-h3 {
-  color: white;
 }

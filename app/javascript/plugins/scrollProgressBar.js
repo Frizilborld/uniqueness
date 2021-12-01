@@ -3,6 +3,7 @@ function scrollProgressBar() {
     return $(document).height() - $(window).height();
   };
 
+  console.log('coucou');
   var getValue = function () {
     return $(window).scrollTop();
   };
