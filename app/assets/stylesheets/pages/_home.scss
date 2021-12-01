@@ -149,11 +149,10 @@
 .month-title {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   h1 {
-    color: white;
-    font-size: 60px;
-    font-weight: bold;
+    color: rgb(145, 97, 97);
+    font-size: 50px;
     font-family: $headers-font;
   }
 }
