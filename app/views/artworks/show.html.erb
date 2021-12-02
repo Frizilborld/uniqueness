@@ -2,7 +2,7 @@
 <% content_for :meta_description, @artwork.description %>
 <% content_for :meta_image, cl_image_path(@artwork.photo.key) %>
 
-<div class="container">
+<div class="container margin-top: 100px;">
   <div class="cards-container-show">
     <div class="card-product-show">
       <%= cl_image_tag @artwork.photo.key %><br>
@@ -18,7 +18,7 @@
 
           <div class="input-user">
           <div class="card-input-user">
-          <p>Trouver un titre !</p>
+          <p>Artwork information</p>
             <% unless ArtworkPrice.find_by(user: current_user, artwork: @artwork) %>
             <%= simple_form_for [@artwork, @artwork_price] do |f| %>
             <%= f.input :price_estimation %>
@@ -75,16 +75,14 @@
         <% else %>
           NO RATE YET
         <% end %> </p>
-
+        <p>Upvotes: <%= @artwork.upvotes.count %></p>
                       <div>
           <% unless Upvote.find_by(user: current_user, artwork: @artwork) %>
-            <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness-upvote' %>
+            <%= link_to "upvote",artwork_upvotes_path(@artwork), method: :post, class:  'btn-uniqueness' %>
           <% else %>
-            <div class="btn-uniqueness-upvote upvoted">You already upvoted</div>
+            <div class="btn-uniqueness upvoted">You already upvoted</div>
           <% end %>
         </div>
-
-          <p>Upvotes: <%= @artwork.upvotes.count %></p>
       </div>
 
     </ul>

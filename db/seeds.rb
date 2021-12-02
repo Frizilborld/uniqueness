@@ -378,15 +378,10 @@ image31.save!
 
 
 
-
-
-
-
-
-
 file = URI.open('https://ipfs.pixura.io/ipfs/QmTDvMkZoxvJYCqSoKfAwWuEY6UcihNec9WPusRFFq6zME/the-last-prophet.jpg')
 image32 = Artwork.new(name: "The Last Prophet", description: 'Have you wondered, perhaps, why the prophets dont walk the land anymore?', user_id: anthony_azewkoh.id,
-   score: 68
+  score: 68
+
 )
 image32.photo.attach(io: file, filename: 'The Last Prophet.jpg', content_type: 'image/jpg')
 image32.upvotes.new(user_id: User.all.sample.id)
@@ -395,6 +390,7 @@ image32.save!
 file = URI.open('https://ipfs.pixura.io/ipfs/QmPfTKvTWvgGvUmVJ1K7x9KNyNmkA2bjpohTtRzoKATcwE/TheIndigoMan.jpg')
 image33 = Artwork.new(name: "The Indigo Man", description: 'One thing is certain: once you see him, you will never forget him.', user_id: anthony_azewkoh.id,
    score: 64
+
 )
 image33.photo.attach(io: file, filename: 'The Indigo Man.jpg', content_type: 'image/jpg')
 image33.upvotes.new(user_id: User.all.sample.id)
@@ -403,6 +399,7 @@ image33.save!
 file = URI.open('https://ipfs.pixura.io/ipfs/QmXCnopCavr5p9FmpTcZ4VcpMuVMq6Ny9owoWUUNnExdkx/TheVioletDaughter.jpg')
 image34 = Artwork.new(name: "The Violet Daughter", description: 'The Violet Daughter, the last of The Deathless, the last on the spectrum.', user_id: anthony_azewkoh.id,
    score: 61
+
 )
 image34.photo.attach(io: file, filename: 'The Violet Daughter.jpg', content_type: 'image/jpg')
 image34.upvotes.new(user_id: User.all.sample.id)
@@ -411,6 +408,7 @@ image34.save!
 file = URI.open('https://ipfs.pixura.io/ipfs/QmQRB7VYL5hrP9TgqycMbGDPZPb2hydozvLTVbwpjG58EG/TheRedMan.jpg')
 image35 = Artwork.new(name: "The Red Man", description: 'Something about old age.', user_id: anthony_azewkoh.id,
    score: 64
+
 )
 image35.photo.attach(io: file, filename: 'The Red Man.jpg', content_type: 'image/jpg')
 image35.upvotes.new(user_id: User.all.sample.id)
