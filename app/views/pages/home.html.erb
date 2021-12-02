@@ -14,9 +14,7 @@
   <br>
 <br>
 <br>
-  <div class="month-title">
-    <h1>Uniqueness artist of the month</h1>
-  </div>
+
   <div class="home-container-2">
     <div class="half-home-3">
       <%= link_to artwork_path(@artworks[0]) do %>
@@ -27,16 +25,14 @@
     <div class="half-home-4">
 
       <h2><span class="color-blue"><%= @artist_of_the_month.name %></span></h2>
-      <h3><span class="color-orange">3 </span>Pieces</h3>
+        <div class="month-title">
+    <h1>Uniqueness artist of the month</h1>
+  </div>
+      <h3><span class="color-orange">2 </span>Pieces</h3>
 
       <div class="w-100">
        <%= link_to artwork_path(@artworks[1]) do %>
           <%= cl_image_tag @artworks[1].photo.key %>
-        <% end %>
-
-
-        <%= link_to artwork_path(@artworks[2]) do %>
-          <%= cl_image_tag @artworks[2].photo.key %>
         <% end %>
 
       </div>
