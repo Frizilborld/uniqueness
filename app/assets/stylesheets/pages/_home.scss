@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   height: 75vh;
+  width: auto;
   color: whitesmoke;
-  margin: 0 auto 5vh auto;
+  margin: 20vh auto 5vh auto;
 }
 
 .home-container-2 {
@@ -23,24 +24,22 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  padding-left: 10px;
   h1 {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
   p{
-    font-size: 24px;
+    font-size: 18px;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    font-family: $body-font;
   }
 }
 
 .color-blue {
   color: #01719e;
-}
-
-.color-orange {
-  color: #ab4b39;
 }
 
 .color-salmon {
@@ -116,15 +115,15 @@
 
 .progress-container {
   width: 100%;
-  background-color: transparent;
+  background-color: black;
   height: 3px;
   display: block;
 }
 .progress-bar {
   background-color: white;
   display: block;
-  height: 5px;
-  z-index: 1000;
+  height: 3px;
+  z-index: 1002;
   position: fixed;
   top: 0;
 }
