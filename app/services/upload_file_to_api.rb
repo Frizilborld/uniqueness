@@ -12,7 +12,7 @@ class UploadFileToApi
 
     headers = {
       "x-rapidapi-host" => 'logoraisr-colortag.p.rapidapi.com',
-      "x-rapidapi-key"  => ENV['RAPID_API_KEY']
+      "x-rapidapi-key" => ENV['RAPID_API_KEY']
     }
 
     params = {
@@ -20,7 +20,6 @@ class UploadFileToApi
         file: HTTP::FormData::File.new(@file.path)
       }
     }
-
 
     # TODO: UNCOMMENT WHEN WE ARE READY TO USE THE API
     response = HTTP.headers(headers).post(url, params)

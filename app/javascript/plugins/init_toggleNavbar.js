@@ -1,10 +1,15 @@
 function toggleNavbar (){
-  window.addEventListener("scroll", function (){
-    let Navbar = document.getElementById('smallnavbar');
-    if(this.window.scrollY > 60){
-      Navbar.classList.add("navbar-mini");
+  window.scroll(0, 0);
+  window.addEventListener('scroll', function (){
+    let navbar = document.getElementById('smallnavbar');
+    if(window.scrollY > 60) {
+      document.querySelectorAll('#smallnavbar').forEach((el) => {
+        el.classList.add('navbar-mini');
+      })
     } else {
-      Navbar.classList.remove("navbar-mini");
+      document.querySelectorAll('#smallnavbar').forEach((el) => {
+        el.classList.remove('navbar-mini');
+      })
     }
   })
 }

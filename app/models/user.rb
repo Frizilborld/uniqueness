@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :artwork_prices, dependent: :destroy
   has_many :upvotes
 
-  #validates :name, presence: true
+  # validates :name, presence: true
 end

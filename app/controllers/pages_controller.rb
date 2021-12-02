@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, only: [ :dashboard ]
+  before_action :authenticate_user!, only: [:dashboard]
 
   def home
     @artist_of_the_month = User.find_by_name('Raphael Lacoste')
@@ -7,13 +7,12 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-     @my_artworks = Artwork.where(user: current_user)
+    @my_artworks = Artwork.where(user: current_user)
   end
 
-   private
+  private
 
   def list_params
     params.require(:artwork).permit(:name, :artwork_id)
   end
-
 end

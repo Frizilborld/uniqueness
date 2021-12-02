@@ -5,22 +5,20 @@ class ArtworkPricesController < ApplicationController
       artwork: @artwork,
       user: current_user
     )
-    unless @artwork_price.persisted?
-      @artwork_price.assign_attributes(artwork_price_params)
-    end
+    @artwork_price.assign_attributes(artwork_price_params) unless @artwork_price.persisted?
 
     if @artwork_price.save!
       redirect_to request.referer
-        flash[:success] = "Your price was done"
-      else
-        redirect_to request.referer
-        flash[:alert] = "Failed"
-      end
+      flash[:success] = "Your price was done"
+    else
+      redirect_to request.referer
+      flash[:alert] = "Failed"
     end
+  end
 
-    private
+  private
 
-    def artwork_price_params
+  def artwork_price_params
     params.require(:artwork_price).permit(:price_estimation)
-    end
+  end
 end

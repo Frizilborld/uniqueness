@@ -12,12 +12,12 @@ class GetColorTags
 
     headers = {
       "x-rapidapi-host" => 'logoraisr-colortag.p.rapidapi.com',
-      "x-rapidapi-key"  => ENV['RAPID_API_KEY']
+      "x-rapidapi-key" => ENV['RAPID_API_KEY']
     }
 
     params = {
-      "file_id": @file_id,
-      "process": "color-classification"
+      file_id: @file_id,
+      process: "color-classification"
     }
 
     payload = <<~JSON
