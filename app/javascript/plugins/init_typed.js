@@ -5,10 +5,13 @@ const initTyped = () => {
   if (element) {
     console.log(element);
     new Typed('.typed-js', {
-      strings: ['Uploading your artwork^1000\n `fetching components...` ^1000\n `Fetching from source...` Checking your artwork^1000\n `Splitting image into pixels...` ^1000\n `Breaking down pixel colours...`'],
-      typeSpeed: 100,
-      loop: true,
-      showCursor: false
+      strings: ['Uploading image... \n Blowing up pixels... \n Measuring colour complexity... \n Getting results...'],
+      typeSpeed: 110,
+      backSpeed: 110,
+      cursorChar: '_',
+      shuffle: false,
+      smartBackspace: true,
+      loop: false,
     });
   }
 };
