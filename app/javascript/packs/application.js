@@ -20,6 +20,7 @@ import "bootstrap";
 import { scrollProgressBar } from '../plugins/scrollProgressBar'
 import { showLoading } from '../plugins/loader'
 import { initTyped } from '../plugins/init_typed';
+import { toggleNavbar } from '../plugins/init_toggleNavbar';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -27,4 +28,5 @@ document.addEventListener('turbolinks:load', () => {
   scrollProgressBar();
   showLoading();
   initTyped();
+  toggleNavbar();
 });
