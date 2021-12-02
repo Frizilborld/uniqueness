@@ -1,9 +1,10 @@
 class ArtworksController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  before_action :authenticate_user!, only: %i[new create]
 
   def index
     if params[:query].present?
-      @artworks = Artwork.joins(:user).where('artworks.name ILIKE :query OR users.name ILIKE :query', query: "%#{params[:query]}%" )
+      @artworks = Artwork.joins(:user).where('artworks.name ILIKE :query OR users.name ILIKE :query',
+                                             query: "%#{params[:query]}%")
     else
       @artworks = Artwork.all
     end
@@ -17,8 +18,6 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
     @artwork_price = ArtworkPrice.new
   end
-
-
 
   def new
     @artwork = Artwork.new
@@ -50,7 +49,6 @@ class ArtworksController < ApplicationController
     @artwork = Artwork.find(params[:id])
     @artwork.update(artwork_params)
     redirect_to artwork_path(@artwork)
-
   end
 
   private

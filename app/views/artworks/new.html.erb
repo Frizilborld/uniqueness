@@ -2,20 +2,23 @@
   <div class="home-container mt-5">
 
   <div>
-    <h1 class="mb-4"><span class="color-blue">Welcome to</span><span class="color-salmon"> Uniqueness.</span><br><span class="color-salmon"> Upload</span> <span class="color-blue">your artwork to get started.</span></h1>
-
+    <h1 class="mb-4"><br><span class="color-blue"> Upload</span> <span class="color-white">your </span> <span class="color-white">artwork </span> <span class="color-white">to get started.</span></h1>
+<br>
+<br>
     <ul>
       <li>Our algorithm breaks down image color complexity</li>
       <li>Receive pricing feedback from the community</li>
       <li>Interact with artwork from artists worldwide</li>
     </ul>
   </div>
-  <%= simple_form_for @artwork do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit 'Upload', class:"btn btn-uniqueness load" %>
-  <% end %>
+    <div class="form form-upload">
+    <%= simple_form_for @artwork do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit 'Upload', class:"btn btn-uniqueness load" %>
+    <% end %>
+    </div>
   </div>
 </div>
 

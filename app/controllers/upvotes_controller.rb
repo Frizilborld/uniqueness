@@ -16,5 +16,4 @@ class UpvotesController < ApplicationController
       flash[:alert] = "Failed"
     end
   end
-
 end
