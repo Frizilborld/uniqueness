@@ -1,6 +1,5 @@
-
 meta_product_name: "Uniqueness"
-meta_title: "Uniqueness - Product tagline"
-meta_description: "Relevant description"
+meta_title: "Uniqueness - Uniqueness, the digital gallery that compares and connects your work with the world"
+meta_description: "Designed for the rapidly growing digital art community, Uniqueness uses an intelligent algorithm to breakdown image colour complexity, helping artists to price and measure the popularity of their work."
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
