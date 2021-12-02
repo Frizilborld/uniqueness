@@ -203,25 +203,6 @@ image11.upvotes.new(user_id: User.all.sample.id)
 image11.upvotes.new(user_id: User.all.sample.id)
 image11.save!
 
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_SQ0jGYFU9qq6EE6hx0UgE9fZsFHQk49-g&usqp=CAU')
-image12 = Artwork.new(name: "Toad", description: "The toad's despair", user_id: jean_potin.id,
-  "height"=>162,
-  "width"=>311,
-  "number_of_pixel_in_image"=>50382,
-  "colors"=> [{"red"=>63, "green"=>184, "blue"=>207, "percentage"=>"72.81", "number_of_pixel"=>36685, "hex"=>"#3fb8cf"},
-  {"red"=>103, "green"=>43, "blue"=>53, "percentage"=>"27.19", "number_of_pixel"=>13697, "hex"=>"#672b35"}],
-  score: 77
-)
-image12.photo.attach(io: file, filename: 'Toad.jpg', content_type: 'image/png')
-image12.upvotes.new(user_id: User.all.sample.id)
-image12.upvotes.new(user_id: User.all.sample.id)
-image12.upvotes.new(user_id: User.all.sample.id)
-image12.upvotes.new(user_id: User.all.sample.id)
-image12.upvotes.new(user_id: User.all.sample.id)
-image12.upvotes.new(user_id: User.all.sample.id)
-image12.save!
-Artworks::ComputeScore.call(image12)
-
 file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FJRK3icwSzVeKXpX_munMs7Jhj4j-S9sP_Zjx1IatToaMvCSzMlX1awnqtfMsAvdb8o&usqp=CAU')
 image13 = Artwork.new(name: "Spell", description: 'The origin of the world', user_id: mili_botis.id,
   height: 250,
@@ -394,15 +375,9 @@ image31.save!
 
 
 
-
-
-
-
-
-
 file = URI.open('https://ipfs.pixura.io/ipfs/QmTDvMkZoxvJYCqSoKfAwWuEY6UcihNec9WPusRFFq6zME/the-last-prophet.jpg')
 image32 = Artwork.new(name: "The Last Prophet", description: 'Have you wondered, perhaps, why the prophets dont walk the land anymore?', user_id: anthony_azewkoh.id,
-   score: 113
+   score: 67
 )
 image32.photo.attach(io: file, filename: 'The Last Prophet.jpg', content_type: 'image/jpg')
 image32.upvotes.new(user_id: User.all.sample.id)
@@ -410,7 +385,7 @@ image32.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmPfTKvTWvgGvUmVJ1K7x9KNyNmkA2bjpohTtRzoKATcwE/TheIndigoMan.jpg')
 image33 = Artwork.new(name: "The Indigo Man", description: 'One thing is certain: once you see him, you will never forget him.', user_id: anthony_azewkoh.id,
-   score: 118
+   score: 70
 )
 image33.photo.attach(io: file, filename: 'The Indigo Man.jpg', content_type: 'image/jpg')
 image33.upvotes.new(user_id: User.all.sample.id)
@@ -418,7 +393,7 @@ image33.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmXCnopCavr5p9FmpTcZ4VcpMuVMq6Ny9owoWUUNnExdkx/TheVioletDaughter.jpg')
 image34 = Artwork.new(name: "The Violet Daughter", description: 'The Violet Daughter, the last of The Deathless, the last on the spectrum.', user_id: anthony_azewkoh.id,
-   score: 120
+   score: 69
 )
 image34.photo.attach(io: file, filename: 'The Violet Daughter.jpg', content_type: 'image/jpg')
 image34.upvotes.new(user_id: User.all.sample.id)
@@ -426,7 +401,7 @@ image34.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmQRB7VYL5hrP9TgqycMbGDPZPb2hydozvLTVbwpjG58EG/TheRedMan.jpg')
 image35 = Artwork.new(name: "The Red Man", description: 'Something about old age.', user_id: anthony_azewkoh.id,
-   score: 121
+   score: 72
 )
 image35.photo.attach(io: file, filename: 'The Red Man.jpg', content_type: 'image/jpg')
 image35.upvotes.new(user_id: User.all.sample.id)
