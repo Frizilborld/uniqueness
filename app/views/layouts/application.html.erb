@@ -23,7 +23,8 @@
 <body>
   <div class="progress-bar"></div>
   <div id="loading" style="display: none;">
-    <img id="loading-image"> <%= image_tag('282.gif') %>
+    <%= render 'shared/navbar' %>
+    <%= image_tag('282.gif', id: "loading-image")%>
     <h3 class="typed-js"></h3>
   </div>
   <%= render 'shared/navbar' %>
