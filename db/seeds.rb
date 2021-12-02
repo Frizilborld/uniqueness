@@ -39,13 +39,7 @@ raphaellacoste = User.create!(name: "Raphael Lacoste", email: 'raphaellacoste@ho
 
 file = URI.open('https://blog.artsper.com/wp-content/uploads/2020/07/Caspar_David_Friedrich_-_Der_Mo%CC%88nch_am_Meer_-_Google_Art_Project-5-644x362.jpg')
 image1 = Artwork.new(name: "Sky gray", description: "Gray light crossroads", user_id: artion.id,
-  height: 362,
-  width: 644,
-  number_of_pixel_in_image: 233128,
-  colors: [{"red"=>167, "green"=>177, "blue"=>175, "percentage"=>"48.66", "number_of_pixel"=>113443, "hex"=>"#a7b1af"},
-   {"red"=>100, "green"=>115, "blue"=>108, "percentage"=>"32.29", "number_of_pixel"=>75276, "hex"=>"#64736c"},
-   {"red"=>21, "green"=>41, "blue"=>31, "percentage"=>"19.05", "number_of_pixel"=>44409, "hex"=>"#15291f"}],
-  score: 101
+  score: 95
 )
 image1.photo.attach(io: file, filename: 'Sky gray.jpg', content_type: 'image/png')
 image1.upvotes.new(user_id: User.all.sample.id)
@@ -94,12 +88,7 @@ image3.save!
 
 file = URI.open('https://d16kd6gzalkogb.cloudfront.net/magazine_images/Guido-Borelli-Image-via-Lookingglass-photo-com.jpg')
 image4 = Artwork.new(name: "River house", description: 'An afternoon in the countryside', user_id: harun_ayhan.id,
-  height: 800,
-  width: 1200,
-  number_of_pixel_in_image: 960000,
-  colors: [{"red"=>120, "green"=>70, "blue"=>47, "percentage"=>"53.86", "number_of_pixel"=>517038, "hex"=>"#78462f"},
-   {"red"=>216, "green"=>171, "blue"=>140, "percentage"=>"46.14", "number_of_pixel"=>442962, "hex"=>"#d8ab8c"}],
-  score: 123
+  score: 104
 )
 image4.photo.attach(io: file, filename: 'River house.jpg', content_type: 'image/png')
 image4.upvotes.new(user_id: User.all.sample.id)
@@ -109,7 +98,9 @@ image4.upvotes.new(user_id: User.all.sample.id)
 image4.save!
 
 file = URI.open('https://www.outdoorpainter.com/wp-content/uploads/2019/06/rural-farm-landscape-paintings-JacalynBeam_STANDTALL.jpg')
-image5 = Artwork.new(name: "Rural life", description: 'Simplicity of the ordinary', user_id: harun_ayhan.id)
+image5 = Artwork.new(name: "Rural life", description: 'Simplicity of the ordinary', user_id: harun_ayhan.id,
+score: 87
+)
 image5.photo.attach(io: file, filename: 'Rural life.jpg', content_type: 'image/png')
 image5.save!
 
@@ -136,24 +127,10 @@ image7.upvotes.new(user_id: User.all.sample.id)
 image7.upvotes.new(user_id: User.all.sample.id)
 image7.save!
 
-file = URI.open('https://cryptofrix.com/blog/wp-content/uploads/2020/12/nft-art.jpg')
-image8 = Artwork.new(name: "One day on mars", description: 'In the shadow of science', user_id: dany_lian.id,
-  height: 630,
-  width: 1200,
-  number_of_pixel_in_image: 756000,
-  colors: [{"red"=>95, "green"=>114, "blue"=>90, "percentage"=>"46.37", "number_of_pixel"=>350584, "hex"=>"#5f725a"},
-   {"red"=>75, "green"=>72, "blue"=>61, "percentage"=>"27.73", "number_of_pixel"=>209629, "hex"=>"#4b483d"},
-    {"red"=>30, "green"=>28, "blue"=>29, "percentage"=>"16.69", "number_of_pixel"=>126174, "hex"=>"#1e1c1d"},
-   {"red"=>185, "green"=>138, "blue"=>119, "percentage"=>"9.21", "number_of_pixel"=>69613, "hex"=>"#b98a77"}],
-  score: 98
-)
-image8.photo.attach(io: file, filename: 'One day on mars.jpg', content_type: 'image/png')
-image8.upvotes.new(user_id: User.all.sample.id)
-image8.upvotes.new(user_id: User.all.sample.id)
-image8.save!
-
 file = URI.open('https://nftcalendar.io/storage/uploads/events/2021/10/f9r6j57BRr9zT3ClADD1w5znYN3E1xeLnDLmdzch.jpg')
-image9 = Artwork.new(name: "Face", description: 'Print in the skin', user_id: samuel_nash.id)
+image9 = Artwork.new(name: "Face", description: 'Print in the skin', user_id: samuel_nash.id,
+score: 103
+)
 image9.photo.attach(io: file, filename: 'Face.jpg', content_type: 'image/png')
 image9.upvotes.new(user_id: User.all.sample.id)
 image9.upvotes.new(user_id: User.all.sample.id)
@@ -203,7 +180,10 @@ image11.save!
 
 
 file = URI.open('https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/291949/406878_86844.jpeg')
-image16 = Artwork.new(name: "Doomsday", description: 'When god sleep the others make war', user_id: viktor_krazolopotisch.id)
+image16 = Artwork.new(name: "Doomsday", description: 'When god sleep the others make war', user_id: viktor_krazolopotisch.id,
+score:  84
+)
+
 image16.photo.attach(io: file, filename: 'Doomsday.jpg', content_type: 'image/png')
 image16.upvotes.new(user_id: User.all.sample.id)
 image16.upvotes.new(user_id: User.all.sample.id)
@@ -214,7 +194,9 @@ image16.upvotes.new(user_id: User.all.sample.id)
 image16.save!
 
 file = URI.open('https://www.arweave.net/lL976IKZ8I-I9D77VgDhDJjgNbLoQtnkk4lajLbc-84?ext=JPG')
-image17 = Artwork.new(name: "Fish", description: 'Underwater feud', user_id: felix_norman.id)
+image17 = Artwork.new(name: "Fish", description: 'Underwater feud', user_id: felix_norman.id,
+score:  106
+)
 image17.photo.attach(io: file, filename: 'Fish.jpg', content_type: 'image/png')
 image17.upvotes.new(user_id: User.all.sample.id)
 image17.upvotes.new(user_id: User.all.sample.id)
@@ -222,13 +204,7 @@ image17.save!
 
 file = URI.open('https://www.arweave.net/KidAqNiW83zlZ0keiVSrYhpy8JzLNHf3StrNRauV1AM?ext=JPG')
 image18 = Artwork.new(name: "Brothers", description: "Brothers in depth", user_id: felix_norman.id,
- height: 1328,
-  width: 1078,
-  number_of_pixel_in_image: 1431584,
-  colors: [{"red"=>49, "green"=>35, "blue"=>22, "percentage"=>"50.54", "number_of_pixel"=>723583, "hex"=>"#312316"},
-   {"red"=>122, "green"=>103, "blue"=>106, "percentage"=>"29.15", "number_of_pixel"=>417269, "hex"=>"#7a676a"},
-    {"red"=>170, "green"=>177, "blue"=>197, "percentage"=>"20.31", "number_of_pixel"=>290732, "hex"=>"#aab1c5"}],
-  score: 109
+  score: 92
 )
 image18.photo.attach(io: file, filename: 'Brothers.jpg', content_type: 'image/png')
 image18.upvotes.new(user_id: User.all.sample.id)
@@ -238,7 +214,9 @@ image18.upvotes.new(user_id: User.all.sample.id)
 image18.save!
 
 file = URI.open('https://i.redd.it/o0frfaowbtq61.jpg')
-image19 = Artwork.new(name: "Pink Fusion", description: 'A bouquet for a flower', user_id:léa_hart.id)
+image19 = Artwork.new(name: "Pink Fusion", description: 'A bouquet for a flower', user_id:léa_hart.id,
+score:  89
+)
 image19.photo.attach(io: file, filename: 'Pink Fusion.jpg', content_type: 'image/png')
 image19.upvotes.new(user_id: User.all.sample.id)
 image19.upvotes.new(user_id: User.all.sample.id)
@@ -268,7 +246,7 @@ image22.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmbjaWyEsrJs76znrmKH3exgS3bYL3EWc5EjnmzcUWydum/BuildingBlocks.jpg')
 image27 = Artwork.new(name: "BUILDING BLOCKS", description: 'Perspectives rarely seen by the human eye. ', user_id: jacob_riglin.id,
-   score: 129
+   score: 93
 )
 image27.photo.attach(io: file, filename: 'BUILDING BLOCKS.jpg', content_type: 'image/jpg')
 image27.upvotes.new(user_id: User.all.sample.id)
@@ -277,7 +255,7 @@ image27.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmPoHP1ba8aKLN1jtuJztibYXDUmhRUttjEbRuXxKrDoW1/petal_me.png')
 image28 = Artwork.new(name: "PETAL ME", description: 'A self-portrait alien collage.', user_id: julia_ponsford.id,
-   score: 109
+   score: 91
 )
 image28.photo.attach(io: file, filename: 'PETAL ME.jpg', content_type: 'image/jpg')
 image28.upvotes.new(user_id: User.all.sample.id)
@@ -295,7 +273,7 @@ image29.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmQrgZA4SYoTL5CQX8Rzca4maQRvYUMwSrc9cQz2dDmZxr')
 image30 = Artwork.new(name: "Garden anarchy", description: 'When the garden glitches out and anarchy rules!', user_id: julia_ponsford.id,
-   score: 107
+   score: 73
 )
 image30.photo.attach(io: file, filename: 'LAnarchie du Jardin.jpg', content_type: 'image/jpg')
 image30.upvotes.new(user_id: User.all.sample.id)
@@ -304,7 +282,7 @@ image30.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmUXJx9jZGCxvUpUewn1A7uC9c2jxDv9W6kh5KswWRqjF1')
 image31 = Artwork.new(name: "Awakening", description: 'The cells awaken and reach for the sky.', user_id: julia_ponsford.id,
-   score: 122
+   score: 110
 )
 image31.photo.attach(io: file, filename: 'Awakening.jpg', content_type: 'image/jpg')
 image31.upvotes.new(user_id: User.all.sample.id)
@@ -355,7 +333,7 @@ image35.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmYbb912dYjXAuoT6mfdYixmLNp7Za2navBjxKvAYs6iQr/Gems-in-Blue-2000x2000.png')
 image36 = Artwork.new(name: "Gems in Blue", description: 'On the water s edge.', user_id: pajaritaflora.id,
-   score: 129
+   score: 94
 )
 image36.photo.attach(io: file, filename: 'Gems in Blue.png', content_type: 'image/png')
 image36.upvotes.new(user_id: User.all.sample.id)
@@ -363,7 +341,7 @@ image36.save!
 
 file = URI.open('https://cdna.artstation.com/p/assets/images/images/031/602/424/large/raphael-lacoste-bg-game-raph.jpg?1604078123')
 image37 = Artwork.new(name: "Northern Lights", description: 'AC Valhalla', user_id: raphaellacoste.id,
-   score: 109
+   score: 92
 )
 image37.photo.attach(io: file, filename: 'Northern Lights.png', content_type: 'image/png')
 image37.upvotes.new(user_id: User.all.sample.id)
@@ -371,7 +349,7 @@ image37.save!
 
 file = URI.open('https://cdna.artstation.com/p/assets/images/images/031/599/668/large/raphael-lacoste-conf-ack-env-floe-rlacoste.jpg?1604071893')
 image38 = Artwork.new(name: "Floe", description: 'AC Valhalla', user_id: raphaellacoste.id,
-   score: 113
+   score: 90
 )
 image38.photo.attach(io: file, filename: 'Floe.png', content_type: 'image/png')
 image38.upvotes.new(user_id: User.all.sample.id)
