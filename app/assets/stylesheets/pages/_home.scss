@@ -5,6 +5,12 @@
   width: auto;
   color: whitesmoke;
   margin: 20vh auto 5vh auto;
+  h1{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: $headers-font;
+    color: rgb(255, 255, 255);
+  }
 }
 
 .home-container-2 {
