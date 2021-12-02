@@ -113,11 +113,6 @@ image5 = Artwork.new(name: "Rural life", description: 'Simplicity of the ordinar
 image5.photo.attach(io: file, filename: 'Rural life.jpg', content_type: 'image/png')
 image5.save!
 
-file = URI.open('https://trendyartideas.com/wp-content/uploads/2021/01/The-Landscape-Painting-of-Rosanne-Croucher.jpg')
-image6 = Artwork.new(name: "Splendour", description: 'Splendour natural world', user_id: lionel_lilak.id)
-image6.photo.attach(io: file, filename: 'Splendour.jpg', content_type: 'image/png')
-image6.upvotes.new(user_id: User.all.sample.id)
-image6.save!
 
 file = URI.open('https://s30965.pcdn.co/blogs/the-study/wp-content/uploads/02-1-950x625.jpg')
 image7 = Artwork.new(name: "Mona Lisa's twin", description: 'Mona Lisa mind waltz', user_id: kraken_nisop.id,
@@ -206,52 +201,6 @@ image11.upvotes.new(user_id: User.all.sample.id)
 image11.upvotes.new(user_id: User.all.sample.id)
 image11.save!
 
-file = URI.open('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6FJRK3icwSzVeKXpX_munMs7Jhj4j-S9sP_Zjx1IatToaMvCSzMlX1awnqtfMsAvdb8o&usqp=CAU')
-image13 = Artwork.new(name: "Spell", description: 'The origin of the world', user_id: mili_botis.id,
-  height: 250,
-  width: 202,
-  number_of_pixel_in_image: 50500,
-  colors: [{"red"=>190, "green"=>168, "blue"=>129, "percentage"=>"45.36", "number_of_pixel"=>22905, "hex"=>"#bea881"},
-   {"red"=>139, "green"=>126, "blue"=>115, "percentage"=>"37.40", "number_of_pixel"=>18887, "hex"=>"#8b7e73"},
-    {"red"=>64, "green"=>51, "blue"=>36, "percentage"=>"17.24", "number_of_pixel"=>8708, "hex"=>"#403324"}],
-  score: 103
-)
-image13.photo.attach(io: file, filename: 'Spell.jpg', content_type: 'image/png')
-image13.upvotes.new(user_id: User.all.sample.id)
-image13.upvotes.new(user_id: User.all.sample.id)
-image13.upvotes.new(user_id: User.all.sample.id)
-image13.save!
-
-file = URI.open('https://tra.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fbin.2F2021.2F10.2F04.2Fb7c0502d-5fd0-4d66-8614-c5acd9516488.2Ejpeg/812x609/background-color/ffffff/quality/70/les-nft-font-decoller-le-marche-de-lart-contemporain.jpg')
-image14 = Artwork.new(name: "Spatial Donuts", description: 'Spatial donuts for an Ewok', user_id: mili_botis.id,
-  height: 609,
-  width: 812,
-  number_of_pixel_in_image: 494508,
-  colors: [{"red"=>152, "green"=>187, "blue"=>181, "percentage"=>"32.54", "number_of_pixel"=>160890, "hex"=>"#98bbb5"},
-   {"red"=>122, "green"=>142, "blue"=>130, "percentage"=>"24.85", "number_of_pixel"=>122885, "hex"=>"#7a8e82"},
-   {"red"=>223, "green"=>227, "blue"=>222, "percentage"=>"24.30", "number_of_pixel"=>120181, "hex"=>"#dfe3de"},
-   {"red"=>85, "green"=>83, "blue"=>78, "percentage"=>"18.31", "number_of_pixel"=>90552, "hex"=>"#55534e"}],
-  score: 109
-)
-image14.photo.attach(io: file, filename: 'Spatial Donuts.jpg', content_type: 'image/png')
-image14.upvotes.new(user_id: User.all.sample.id)
-image14.save!
-
-file = URI.open('https://nftartgallery1.com/wp-content/uploads/2021/05/0111.jpg')
-image15 = Artwork.new(name: "Ruins", description: 'After the old next', user_id: viktor_krazolopotisch.id,
-  height: 536,
-  width: 800,
-  number_of_pixel_in_image: 428800,
-  colors: [{"red"=>200, "green"=>174, "blue"=>173, "percentage"=>"59.96", "number_of_pixel"=>257129, "hex"=>"#c8aead"},
-   {"red"=>142, "green"=>116, "blue"=>103, "percentage"=>"19.76", "number_of_pixel"=>84719, "hex"=>"#8e7467"},
-   {"red"=>229, "green"=>227, "blue"=>221, "percentage"=>"10.47", "number_of_pixel"=>44901, "hex"=>"#e5e3dd"},
-   {"red"=>36, "green"=>30, "blue"=>28, "percentage"=>"9.81", "number_of_pixel"=>42051, "hex"=>"#241e1c"}],
-  score:  77
-)
-image15.photo.attach(io: file, filename: 'Ruins.jpg', content_type: 'image/png')
-image15.upvotes.new(user_id: User.all.sample.id)
-image15.upvotes.new(user_id: User.all.sample.id)
-image15.save!
 
 file = URI.open('https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/291949/406878_86844.jpeg')
 image16 = Artwork.new(name: "Doomsday", description: 'When god sleep the others make war', user_id: viktor_krazolopotisch.id)
@@ -295,21 +244,6 @@ image19.upvotes.new(user_id: User.all.sample.id)
 image19.upvotes.new(user_id: User.all.sample.id)
 image19.save!
 
-file = URI.open('https://www.nftculture.com/wp-content/uploads/2021/11/taniarivilisnftartist-1160x665.png')
-image20 = Artwork.new(name: "Man of Eden", description: 'A ride in paradise', user_id: léa_hart.id,
-  height: 665,
-  width: 1160,
-  number_of_pixel_in_image: 771400,
-  colors: [{"red"=>75, "green"=>30, "blue"=>66, "percentage"=>"44.39", "number_of_pixel"=>342426, "hex"=>"#4b1e42"},
-   {"red"=>137, "green"=>82, "blue"=>96, "percentage"=>"33.21", "number_of_pixel"=>256146, "hex"=>"#895260"},
-   {"red"=>201, "green"=>162, "blue"=>151, "percentage"=>"22.40", "number_of_pixel"=>172828, "hex"=>"#c9a297"}],
-  score: 109
-)
-image20.photo.attach(io: file, filename: 'Man of Eden.jpg', content_type: 'image/png')
-image20.upvotes.new(user_id: User.all.sample.id)
-image20.upvotes.new(user_id: User.all.sample.id)
-image20.upvotes.new(user_id: User.all.sample.id)
-image20.save!
 
 file = URI.open('https://ipfs.pixura.io/ipfs/QmSVLJ9YBUN3v4waqKjqsGZjPdxDEcNUmADC4JM7Yc4idE/old-money-corrupts-blue-eyes-.png')
 image21 = Artwork.new(name: "Old Money", description: 'And you forget that Old Money Corrupts the bluest of eyes...', user_id: miss_alsimpson.id,

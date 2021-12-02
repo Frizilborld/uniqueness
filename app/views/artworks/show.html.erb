@@ -27,7 +27,7 @@
             Users estimated price: <%= @artwork.artwork_prices.average(:price_estimation)%>€
 
 
-        <p>Score :
+        <p>Color complexity rate :
         <% if @artwork.score %>
           <% if @artwork.score.between?(0, 78)#1étoiles %>
             <%= @artwork.score %> <br>
