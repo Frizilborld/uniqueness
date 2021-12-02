@@ -12,7 +12,7 @@ module Artworks
     end
 
     def call
-      score = pixels_score * 0.2 + color_score * 1.5
+      score = (pixels_score * 0.2) + (color_score * 1.5)
 
       @artwork.update!(score: score)
     end
@@ -28,7 +28,7 @@ module Artworks
     def color_score
       color_1, color_2 = @artwork.colors
 
-      return color_usage_difference(color_1, color_2) * 0.7 + color_difference(color_1, color_2) * 0.3
+      return (color_usage_difference(color_1, color_2) * 0.7) + (color_difference(color_1, color_2) * 0.3)
     end
 
     def color_usage_difference(color_1, color_2)

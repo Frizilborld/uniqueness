@@ -4,7 +4,7 @@ require 'open-uri'
 module Artworks
   class SeedsInApi
     def self.call(artworks = nil)
-# [54, 56, 42, 43, 44, 46]
+      # [54, 56, 42, 43, 44, 46]
       artworks ||= Artwork.where(number_of_pixel_in_image: nil)
 
       artworks.each do |artwork|
