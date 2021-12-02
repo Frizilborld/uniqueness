@@ -5,25 +5,23 @@
     margin: 0 auto;
   }
   .fab {
-    font-size: 30px;
+    font-size: 20px;
   }
   a {
     color: white;
-    font-size: 20px;
+    font-size: 14px;
+  }
+  a:hover {
+    color: darkgray;
   }
 }
 
-.fab:hover{
-  transform: scale(1.1);
-}
-
 .socials a:hover{
-  transform: scale(1.1);
   color: darkgray;
 }
 
 .footer-brand {
-  height: 40px;
+  height: 30px;
 }
 
 .border-top-white {
