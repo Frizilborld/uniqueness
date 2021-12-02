@@ -363,7 +363,7 @@ image36.save!
 
 file = URI.open('https://cdna.artstation.com/p/assets/images/images/031/602/424/large/raphael-lacoste-bg-game-raph.jpg?1604078123')
 image37 = Artwork.new(name: "Northern Lights", description: 'AC Valhalla', user_id: raphaellacoste.id,
-   score: 133
+   score: 109
 )
 image37.photo.attach(io: file, filename: 'Northern Lights.png', content_type: 'image/png')
 image37.upvotes.new(user_id: User.all.sample.id)
@@ -371,7 +371,7 @@ image37.save!
 
 file = URI.open('https://cdna.artstation.com/p/assets/images/images/031/599/668/large/raphael-lacoste-conf-ack-env-floe-rlacoste.jpg?1604071893')
 image38 = Artwork.new(name: "Floe", description: 'AC Valhalla', user_id: raphaellacoste.id,
-   score: 128
+   score: 113
 )
 image38.photo.attach(io: file, filename: 'Floe.png', content_type: 'image/png')
 image38.upvotes.new(user_id: User.all.sample.id)
@@ -379,7 +379,7 @@ image38.save!
 
 file = URI.open('https://cdnb.artstation.com/p/assets/images/images/023/833/191/large/raphael-lacoste-boat-web.jpg?1580478358')
 image39 = Artwork.new(name: "Arrival", description: 'Early morning', user_id: raphaellacoste.id,
-   score: 129
+   score: 112
 )
 image39.photo.attach(io: file, filename: 'Arrival.png', content_type: 'image/png')
 image39.upvotes.new(user_id: User.all.sample.id)
